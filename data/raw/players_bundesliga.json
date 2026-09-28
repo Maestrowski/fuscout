@@ -1,0 +1,5924 @@
+[
+  {
+    "player": {
+      "id": 3,
+      "name": "E. Oelschl\u00e4gel",
+      "firstname": "Eric Dirk",
+      "lastname": "Oelschl\u00e4gel",
+      "age": 30,
+      "birth": {
+        "date": "1995-09-20",
+        "place": "Hoyerswerda",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "193",
+      "weight": "85",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/3.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 186,
+          "name": "FC St. Pauli",
+          "logo": "https://media.api-sports.io/football/teams/186.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 0,
+          "lineups": 0,
+          "minutes": 0,
+          "number": null,
+          "position": "Goalkeeper",
+          "rating": null,
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 10
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": 0,
+          "assists": null,
+          "saves": null
+        },
+        "passes": {
+          "total": null,
+          "key": null,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": null,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": 2
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 8,
+      "name": "Rapha\u00ebl Guerreiro",
+      "firstname": "Rapha\u00ebl Adelino Jos\u00e9",
+      "lastname": "Guerreiro",
+      "age": 32,
+      "birth": {
+        "date": "1993-12-22",
+        "place": "Le Blanc-Mesnil",
+        "country": "France"
+      },
+      "nationality": "Portugal",
+      "height": "170",
+      "weight": "71",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/8.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 32,
+          "lineups": 28,
+          "minutes": 1581,
+          "number": null,
+          "position": "Defender",
+          "rating": "7.281818",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 4,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 17,
+          "on": 11
+        },
+        "goals": {
+          "total": 4,
+          "conceded": 0,
+          "assists": 3,
+          "saves": null
+        },
+        "passes": {
+          "total": 1232,
+          "key": 27,
+          "accuracy": 50
+        },
+        "tackles": {
+          "total": 19,
+          "blocks": null,
+          "interceptions": 10
+        },
+        "duels": {
+          "total": 94,
+          "won": 43
+        },
+        "dribbles": {
+          "attempts": 19,
+          "success": 10,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 7,
+          "committed": 9
+        },
+        "cards": {
+          "yellow": 2,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 13,
+      "name": "D. Zagadou",
+      "firstname": "Dan-Axel",
+      "lastname": "Zagadou",
+      "age": 26,
+      "birth": {
+        "date": "1999-06-03",
+        "place": "Cr\u00e9teil",
+        "country": "France"
+      },
+      "nationality": "France",
+      "height": "196",
+      "weight": "90",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/13.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 172,
+          "name": "VfB Stuttgart",
+          "logo": "https://media.api-sports.io/football/teams/172.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 3,
+          "lineups": 2,
+          "minutes": 31,
+          "number": null,
+          "position": "Defender",
+          "rating": "6.300000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 1,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": null,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 9,
+          "key": null,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": 1
+        },
+        "duels": {
+          "total": 1,
+          "won": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": null,
+          "committed": 1
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 14,
+      "name": "M. Dahoud",
+      "firstname": "Mahmoud",
+      "lastname": "Dahoud",
+      "age": 29,
+      "birth": {
+        "date": "1996-01-01",
+        "place": "Amouda",
+        "country": "Syria"
+      },
+      "nationality": "Germany",
+      "height": "178",
+      "weight": "68",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/14.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 169,
+          "name": "Eintracht Frankfurt",
+          "logo": "https://media.api-sports.io/football/teams/169.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 25,
+          "lineups": 14,
+          "minutes": 367,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.775000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 11,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 3,
+          "on": 2
+        },
+        "goals": {
+          "total": 1,
+          "conceded": 0,
+          "assists": 1,
+          "saves": null
+        },
+        "passes": {
+          "total": 220,
+          "key": 8,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 9,
+          "blocks": 1,
+          "interceptions": 2
+        },
+        "duels": {
+          "total": 31,
+          "won": 13
+        },
+        "dribbles": {
+          "attempts": 3,
+          "success": 1,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 2,
+          "committed": 10
+        },
+        "cards": {
+          "yellow": 2,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 16,
+      "name": "M. G\u00f6tze",
+      "firstname": "Mario",
+      "lastname": "G\u00f6tze",
+      "age": 33,
+      "birth": {
+        "date": "1992-06-03",
+        "place": "Memmingen",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "176",
+      "weight": "75",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/16.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 169,
+          "name": "Eintracht Frankfurt",
+          "logo": "https://media.api-sports.io/football/teams/169.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 28,
+          "lineups": 22,
+          "minutes": 1548,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.966666",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 6,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 7,
+          "on": 5
+        },
+        "goals": {
+          "total": 3,
+          "conceded": 0,
+          "assists": 2,
+          "saves": null
+        },
+        "passes": {
+          "total": 797,
+          "key": 34,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 41,
+          "blocks": 1,
+          "interceptions": 7
+        },
+        "duels": {
+          "total": 154,
+          "won": 68
+        },
+        "dribbles": {
+          "attempts": 22,
+          "success": 9,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 15,
+          "committed": 15
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 19,
+      "name": "J. Weigl",
+      "firstname": "Julian",
+      "lastname": "Weigl",
+      "age": 30,
+      "birth": {
+        "date": "1995-09-08",
+        "place": "Bad Aibling",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "186",
+      "weight": "72",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/19.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 163,
+          "name": "Borussia M\u00f6nchengladbach",
+          "logo": "https://media.api-sports.io/football/teams/163.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 33,
+          "lineups": 33,
+          "minutes": 2888,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "7.009090",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 16,
+          "on": 6
+        },
+        "goals": {
+          "total": null,
+          "conceded": 0,
+          "assists": 2,
+          "saves": null
+        },
+        "passes": {
+          "total": 1742,
+          "key": 12,
+          "accuracy": 47
+        },
+        "tackles": {
+          "total": 54,
+          "blocks": 27,
+          "interceptions": 47
+        },
+        "duels": {
+          "total": 189,
+          "won": 123
+        },
+        "dribbles": {
+          "attempts": 6,
+          "success": 6,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 24,
+          "committed": 23
+        },
+        "cards": {
+          "yellow": 8,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 22,
+      "name": "J. Bruun Larsen",
+      "firstname": "Jacob",
+      "lastname": "Bruun Larsen",
+      "age": 27,
+      "birth": {
+        "date": "1998-09-19",
+        "place": "Lyngby",
+        "country": "Denmark"
+      },
+      "nationality": "Denmark",
+      "height": "183",
+      "weight": "77",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/22.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 172,
+          "name": "VfB Stuttgart",
+          "logo": "https://media.api-sports.io/football/teams/172.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 15,
+          "lineups": 3,
+          "minutes": 406,
+          "number": null,
+          "position": "Attacker",
+          "rating": "6.766666",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 12,
+          "out": 3,
+          "bench": 14
+        },
+        "shots": {
+          "total": 12,
+          "on": 7
+        },
+        "goals": {
+          "total": 1,
+          "conceded": 0,
+          "assists": 2,
+          "saves": null
+        },
+        "passes": {
+          "total": 139,
+          "key": 8,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 4,
+          "blocks": 1,
+          "interceptions": 1
+        },
+        "duels": {
+          "total": 49,
+          "won": 17
+        },
+        "dribbles": {
+          "attempts": 20,
+          "success": 6,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 2,
+          "committed": 2
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      },
+      {
+        "team": {
+          "id": 167,
+          "name": "1899 Hoffenheim",
+          "logo": "https://media.api-sports.io/football/teams/167.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 12,
+          "lineups": 3,
+          "minutes": 393,
+          "number": null,
+          "position": "Attacker",
+          "rating": "6.766666",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 9,
+          "out": 3,
+          "bench": 12
+        },
+        "shots": {
+          "total": 12,
+          "on": 7
+        },
+        "goals": {
+          "total": 2,
+          "conceded": 0,
+          "assists": 2,
+          "saves": null
+        },
+        "passes": {
+          "total": 139,
+          "key": 8,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 4,
+          "blocks": 1,
+          "interceptions": 1
+        },
+        "duels": {
+          "total": 49,
+          "won": 17
+        },
+        "dribbles": {
+          "attempts": 20,
+          "success": 6,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 2,
+          "committed": 2
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 24,
+      "name": "M. Philipp",
+      "firstname": "Maximilian Marcus",
+      "lastname": "Philipp",
+      "age": 31,
+      "birth": {
+        "date": "1994-03-01",
+        "place": "Berlin",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "183",
+      "weight": "79",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/24.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 160,
+          "name": "SC Freiburg",
+          "logo": "https://media.api-sports.io/football/teams/160.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 2,
+          "lineups": 0,
+          "minutes": 15,
+          "number": null,
+          "position": "Attacker",
+          "rating": "6.300000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 2,
+          "out": 0,
+          "bench": 14
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 7,
+          "key": null,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": 2,
+          "won": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": null,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 26,
+      "name": "M. Wolf",
+      "firstname": "Marius",
+      "lastname": "Wolf",
+      "age": 30,
+      "birth": {
+        "date": "1995-05-27",
+        "place": "Coburg",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "188",
+      "weight": "81",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/26.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 170,
+          "name": "FC Augsburg",
+          "logo": "https://media.api-sports.io/football/teams/170.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 32,
+          "lineups": 31,
+          "minutes": 2168,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.850000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 1,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 7,
+          "on": 2
+        },
+        "goals": {
+          "total": 1,
+          "conceded": 0,
+          "assists": 3,
+          "saves": null
+        },
+        "passes": {
+          "total": 843,
+          "key": 46,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 27,
+          "blocks": 5,
+          "interceptions": 24
+        },
+        "duels": {
+          "total": 159,
+          "won": 68
+        },
+        "dribbles": {
+          "attempts": 41,
+          "success": 19,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 14,
+          "committed": 19
+        },
+        "cards": {
+          "yellow": 2,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 86,
+      "name": "L. Openda",
+      "firstname": "Ikoma-Lo\u00efs",
+      "lastname": "Openda",
+      "age": 25,
+      "birth": {
+        "date": "2000-02-16",
+        "place": "Li\u00e8ge",
+        "country": "Belgium"
+      },
+      "nationality": "Belgium",
+      "height": "177",
+      "weight": "75",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/86.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 173,
+          "name": "RB Leipzig",
+          "logo": "https://media.api-sports.io/football/teams/173.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 33,
+          "lineups": 31,
+          "minutes": 2463,
+          "number": null,
+          "position": "Attacker",
+          "rating": "7.030303",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 2,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 58,
+          "on": 33
+        },
+        "goals": {
+          "total": 9,
+          "conceded": 0,
+          "assists": 5,
+          "saves": null
+        },
+        "passes": {
+          "total": 557,
+          "key": 28,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 7,
+          "blocks": 1,
+          "interceptions": 5
+        },
+        "duels": {
+          "total": 258,
+          "won": 125
+        },
+        "dribbles": {
+          "attempts": 59,
+          "success": 22,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 77,
+          "committed": 29
+        },
+        "cards": {
+          "yellow": 5,
+          "yellowred": null,
+          "red": 1
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 1,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 98,
+      "name": "B. Henrichs",
+      "firstname": "Benjamin Paa Kwesi",
+      "lastname": "Henrichs",
+      "age": 28,
+      "birth": {
+        "date": "1997-02-23",
+        "place": "Bocholt",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "183",
+      "weight": "79",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/98.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 173,
+          "name": "RB Leipzig",
+          "logo": "https://media.api-sports.io/football/teams/173.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 15,
+          "lineups": 10,
+          "minutes": 934,
+          "number": null,
+          "position": "Defender",
+          "rating": "6.933333",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 5,
+          "out": 4,
+          "bench": 5
+        },
+        "shots": {
+          "total": 6,
+          "on": 1
+        },
+        "goals": {
+          "total": 0,
+          "conceded": 0,
+          "assists": 2,
+          "saves": null
+        },
+        "passes": {
+          "total": 399,
+          "key": 11,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 30,
+          "blocks": 3,
+          "interceptions": 15
+        },
+        "duels": {
+          "total": 97,
+          "won": 56
+        },
+        "dribbles": {
+          "attempts": 13,
+          "success": 9,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 9,
+          "committed": 13
+        },
+        "cards": {
+          "yellow": 3,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 175,
+      "name": "E. Dier",
+      "firstname": "Eric Jeremy Edgar",
+      "lastname": "Dier",
+      "age": 32,
+      "birth": {
+        "date": "1994-01-15",
+        "place": "Cheltenham",
+        "country": "England"
+      },
+      "nationality": "England",
+      "height": "188",
+      "weight": "83",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/175.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 21,
+          "lineups": 19,
+          "minutes": 1468,
+          "number": null,
+          "position": "Defender",
+          "rating": "7.114285",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 2,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 8,
+          "on": 6
+        },
+        "goals": {
+          "total": 2,
+          "conceded": 0,
+          "assists": 1,
+          "saves": null
+        },
+        "passes": {
+          "total": 1407,
+          "key": 3,
+          "accuracy": 66
+        },
+        "tackles": {
+          "total": 19,
+          "blocks": 8,
+          "interceptions": 17
+        },
+        "duels": {
+          "total": 144,
+          "won": 77
+        },
+        "dribbles": {
+          "attempts": 3,
+          "success": 2,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 4,
+          "committed": 16
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 184,
+      "name": "H. Kane",
+      "firstname": "Harry Edward",
+      "lastname": "Kane",
+      "age": 32,
+      "birth": {
+        "date": "1993-07-28",
+        "place": "London",
+        "country": "England"
+      },
+      "nationality": "England",
+      "height": "188",
+      "weight": "86",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/184.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 31,
+          "lineups": 29,
+          "minutes": 2389,
+          "number": null,
+          "position": "Attacker",
+          "rating": "7.696774",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 2,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 90,
+          "on": 54
+        },
+        "goals": {
+          "total": 26,
+          "conceded": 0,
+          "assists": 8,
+          "saves": null
+        },
+        "passes": {
+          "total": 617,
+          "key": 35,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 14,
+          "blocks": 2,
+          "interceptions": 3
+        },
+        "duels": {
+          "total": 164,
+          "won": 84
+        },
+        "dribbles": {
+          "attempts": 49,
+          "success": 21,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 21,
+          "committed": 9
+        },
+        "cards": {
+          "yellow": 5,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 9,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 249,
+      "name": "D. Malen",
+      "firstname": "Donyell",
+      "lastname": "Malen",
+      "age": 26,
+      "birth": {
+        "date": "1999-01-19",
+        "place": "Wieringen",
+        "country": "Netherlands"
+      },
+      "nationality": "Netherlands",
+      "height": "176",
+      "weight": "68",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/249.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 165,
+          "name": "Borussia Dortmund",
+          "logo": "https://media.api-sports.io/football/teams/165.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 16,
+          "lineups": 11,
+          "minutes": 610,
+          "number": null,
+          "position": "Attacker",
+          "rating": "6.678571",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 5,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 10,
+          "on": 6
+        },
+        "goals": {
+          "total": 3,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 172,
+          "key": 1,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": 3
+        },
+        "duels": {
+          "total": 53,
+          "won": 19
+        },
+        "dribbles": {
+          "attempts": 29,
+          "success": 11,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 7,
+          "committed": 2
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 270,
+      "name": "S. Nsoki",
+      "firstname": "Stanley Pierre",
+      "lastname": "Nsoki",
+      "age": 26,
+      "birth": {
+        "date": "1999-04-09",
+        "place": "Poissy",
+        "country": "France"
+      },
+      "nationality": "France",
+      "height": "184",
+      "weight": "77",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/270.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 167,
+          "name": "1899 Hoffenheim",
+          "logo": "https://media.api-sports.io/football/teams/167.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 30,
+          "lineups": 22,
+          "minutes": 1324,
+          "number": null,
+          "position": "Defender",
+          "rating": "6.576190",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 8,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 3,
+          "on": 1
+        },
+        "goals": {
+          "total": null,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 809,
+          "key": 7,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 24,
+          "blocks": 7,
+          "interceptions": 26
+        },
+        "duels": {
+          "total": 108,
+          "won": 63
+        },
+        "dribbles": {
+          "attempts": 14,
+          "success": 11,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 6,
+          "committed": 12
+        },
+        "cards": {
+          "yellow": 3,
+          "yellowred": null,
+          "red": 1
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 294,
+      "name": "N. Ke\u00efta",
+      "firstname": "Naby Laye",
+      "lastname": "Ke\u00efta",
+      "age": 30,
+      "birth": {
+        "date": "1995-02-10",
+        "place": "Conakry",
+        "country": "Guinea"
+      },
+      "nationality": "Guinea",
+      "height": "172",
+      "weight": "64",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/294.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 162,
+          "name": "Werder Bremen",
+          "logo": "https://media.api-sports.io/football/teams/162.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 0,
+          "lineups": 0,
+          "minutes": 0,
+          "number": null,
+          "position": "Midfielder",
+          "rating": null,
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 0
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": null,
+          "assists": null,
+          "saves": null
+        },
+        "passes": {
+          "total": null,
+          "key": null,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": null,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": null,
+          "missed": null,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 376,
+      "name": "Diogo Leite",
+      "firstname": "Diogo Filipe",
+      "lastname": "Monteiro Pinto Leite",
+      "age": 27,
+      "birth": {
+        "date": "1999-01-23",
+        "place": "Porto",
+        "country": "Portugal"
+      },
+      "nationality": "Portugal",
+      "height": "188",
+      "weight": "70",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/376.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 182,
+          "name": "Union Berlin",
+          "logo": "https://media.api-sports.io/football/teams/182.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 30,
+          "lineups": 29,
+          "minutes": 2548,
+          "number": null,
+          "position": "Defender",
+          "rating": "7.213333",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 1,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 15,
+          "on": 8
+        },
+        "goals": {
+          "total": 1,
+          "conceded": 0,
+          "assists": 2,
+          "saves": null
+        },
+        "passes": {
+          "total": 1357,
+          "key": 14,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 64,
+          "blocks": 25,
+          "interceptions": 52
+        },
+        "duels": {
+          "total": 304,
+          "won": 189
+        },
+        "dribbles": {
+          "attempts": 14,
+          "success": 10,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 37,
+          "committed": 25
+        },
+        "cards": {
+          "yellow": 3,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 399,
+      "name": "A. N\u00fcbel",
+      "firstname": "Alexander",
+      "lastname": "N\u00fcbel",
+      "age": 29,
+      "birth": {
+        "date": "1996-09-30",
+        "place": "Paderborn",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "193",
+      "weight": "86",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/399.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 172,
+          "name": "VfB Stuttgart",
+          "logo": "https://media.api-sports.io/football/teams/172.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 34,
+          "lineups": 34,
+          "minutes": 3060,
+          "number": null,
+          "position": "Goalkeeper",
+          "rating": "6.917647",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 0
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": 53,
+          "assists": 1,
+          "saves": 85
+        },
+        "passes": {
+          "total": 1167,
+          "key": 3,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": 11,
+          "won": 9
+        },
+        "dribbles": {
+          "attempts": 1,
+          "success": 1,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 4,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": 3
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 424,
+      "name": "S. Skrzybski",
+      "firstname": "Steven",
+      "lastname": "Skrzybski",
+      "age": 33,
+      "birth": {
+        "date": "1992-11-18",
+        "place": "Berlin",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "174",
+      "weight": "72",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/424.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 191,
+          "name": "Holstein Kiel",
+          "logo": "https://media.api-sports.io/football/teams/191.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 24,
+          "lineups": 20,
+          "minutes": 1331,
+          "number": null,
+          "position": "Attacker",
+          "rating": "6.962500",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 4,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 21,
+          "on": 13
+        },
+        "goals": {
+          "total": 6,
+          "conceded": 0,
+          "assists": 3,
+          "saves": null
+        },
+        "passes": {
+          "total": 411,
+          "key": 22,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 19,
+          "blocks": null,
+          "interceptions": 13
+        },
+        "duels": {
+          "total": 143,
+          "won": 60
+        },
+        "dribbles": {
+          "attempts": 22,
+          "success": 13,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 22,
+          "committed": 16
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 1,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 497,
+      "name": "M. Neuer",
+      "firstname": "Manuel Peter",
+      "lastname": "Neuer",
+      "age": 39,
+      "birth": {
+        "date": "1986-03-27",
+        "place": "Gelsenkirchen",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "193",
+      "weight": "93",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/497.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 23,
+          "lineups": 23,
+          "minutes": 1980,
+          "number": null,
+          "position": "Goalkeeper",
+          "rating": "6.977272",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": null,
+          "conceded": 13,
+          "assists": 0,
+          "saves": 32
+        },
+        "passes": {
+          "total": 843,
+          "key": 1,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 1,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": 7,
+          "won": 7
+        },
+        "dribbles": {
+          "attempts": 1,
+          "success": 1,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 1,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": 0
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 498,
+      "name": "S. Ulreich",
+      "firstname": "Sven",
+      "lastname": "Ulreich",
+      "age": 37,
+      "birth": {
+        "date": "1988-08-03",
+        "place": "Schorndorf",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "192",
+      "weight": "87",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/498.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 1,
+          "lineups": 1,
+          "minutes": 90,
+          "number": null,
+          "position": "Goalkeeper",
+          "rating": "6.900000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 15
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 26,
+          "key": null,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": null,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": 0
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 502,
+      "name": "J. Kimmich",
+      "firstname": "Joshua Walter",
+      "lastname": "Kimmich",
+      "age": 30,
+      "birth": {
+        "date": "1995-02-08",
+        "place": "Rottweil",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "177",
+      "weight": "75",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/502.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 33,
+          "lineups": 32,
+          "minutes": 2847,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "7.933333",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 1,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 21,
+          "on": 10
+        },
+        "goals": {
+          "total": 3,
+          "conceded": 0,
+          "assists": 7,
+          "saves": null
+        },
+        "passes": {
+          "total": 3425,
+          "key": 84,
+          "accuracy": 96
+        },
+        "tackles": {
+          "total": 47,
+          "blocks": 3,
+          "interceptions": 24
+        },
+        "duels": {
+          "total": 155,
+          "won": 97
+        },
+        "dribbles": {
+          "attempts": 21,
+          "success": 12,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 27,
+          "committed": 15
+        },
+        "cards": {
+          "yellow": 3,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 506,
+      "name": "N. S\u00fcle",
+      "firstname": "Niklas",
+      "lastname": "S\u00fcle",
+      "age": 30,
+      "birth": {
+        "date": "1995-09-03",
+        "place": "Frankfurt am Main",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "195",
+      "weight": "99",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/506.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 165,
+          "name": "Borussia Dortmund",
+          "logo": "https://media.api-sports.io/football/teams/165.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 21,
+          "lineups": 15,
+          "minutes": 1058,
+          "number": null,
+          "position": "Defender",
+          "rating": "6.846666",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 6,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 7,
+          "on": 2
+        },
+        "goals": {
+          "total": null,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 925,
+          "key": 3,
+          "accuracy": 57
+        },
+        "tackles": {
+          "total": 15,
+          "blocks": 6,
+          "interceptions": 4
+        },
+        "duels": {
+          "total": 51,
+          "won": 32
+        },
+        "dribbles": {
+          "attempts": 7,
+          "success": 3,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 2,
+          "committed": 5
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 508,
+      "name": "K. Coman",
+      "firstname": "Kingsley Junior",
+      "lastname": "Coman",
+      "age": 29,
+      "birth": {
+        "date": "1996-06-13",
+        "place": "Paris",
+        "country": "France"
+      },
+      "nationality": "France",
+      "height": "181",
+      "weight": "76",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/508.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 28,
+          "lineups": 14,
+          "minutes": 1283,
+          "number": null,
+          "position": "Attacker",
+          "rating": "7.139285",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 14,
+          "out": 13,
+          "bench": 14
+        },
+        "shots": {
+          "total": 33,
+          "on": 17
+        },
+        "goals": {
+          "total": 5,
+          "conceded": 0,
+          "assists": 4,
+          "saves": null
+        },
+        "passes": {
+          "total": 686,
+          "key": 32,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 16,
+          "blocks": null,
+          "interceptions": 8
+        },
+        "duels": {
+          "total": 153,
+          "won": 77
+        },
+        "dribbles": {
+          "attempts": 69,
+          "success": 38,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 12,
+          "committed": 9
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 509,
+      "name": "A. Davies",
+      "firstname": "Alphonso Boyle",
+      "lastname": "Davies",
+      "age": 25,
+      "birth": {
+        "date": "2000-11-02",
+        "place": "Buduburam",
+        "country": "Ghana"
+      },
+      "nationality": "Canada",
+      "height": "183",
+      "weight": "75",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/509.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 21,
+          "lineups": 18,
+          "minutes": 1561,
+          "number": null,
+          "position": "Defender",
+          "rating": "7.184210",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 3,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 9,
+          "on": 3
+        },
+        "goals": {
+          "total": 1,
+          "conceded": 0,
+          "assists": 2,
+          "saves": null
+        },
+        "passes": {
+          "total": 1142,
+          "key": 27,
+          "accuracy": 54
+        },
+        "tackles": {
+          "total": 30,
+          "blocks": 1,
+          "interceptions": 13
+        },
+        "duels": {
+          "total": 170,
+          "won": 95
+        },
+        "dribbles": {
+          "attempts": 62,
+          "success": 30,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 26,
+          "committed": 8
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 510,
+      "name": "S. Gnabry",
+      "firstname": "Serge David",
+      "lastname": "Gnabry",
+      "age": 30,
+      "birth": {
+        "date": "1995-07-14",
+        "place": "Stuttgart",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "176",
+      "weight": "77",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/510.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 27,
+          "lineups": 13,
+          "minutes": 1235,
+          "number": null,
+          "position": "Attacker",
+          "rating": "7.037037",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 14,
+          "out": 9,
+          "bench": 16
+        },
+        "shots": {
+          "total": 38,
+          "on": 18
+        },
+        "goals": {
+          "total": 7,
+          "conceded": 0,
+          "assists": 5,
+          "saves": null
+        },
+        "passes": {
+          "total": 563,
+          "key": 25,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 19,
+          "blocks": null,
+          "interceptions": 6
+        },
+        "duels": {
+          "total": 105,
+          "won": 46
+        },
+        "dribbles": {
+          "attempts": 36,
+          "success": 17,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 6,
+          "committed": 19
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 1,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 511,
+      "name": "L. Goretzka",
+      "firstname": "Leon Christoph",
+      "lastname": "Goretzka",
+      "age": 30,
+      "birth": {
+        "date": "1995-02-06",
+        "place": "Bochum",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "189",
+      "weight": "82",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/511.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 31,
+          "lineups": 22,
+          "minutes": 1321,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "7.180000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 9,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 22,
+          "on": 11
+        },
+        "goals": {
+          "total": 4,
+          "conceded": 0,
+          "assists": 1,
+          "saves": null
+        },
+        "passes": {
+          "total": 1210,
+          "key": 12,
+          "accuracy": 42
+        },
+        "tackles": {
+          "total": 17,
+          "blocks": 7,
+          "interceptions": 18
+        },
+        "duels": {
+          "total": 120,
+          "won": 68
+        },
+        "dribbles": {
+          "attempts": 8,
+          "success": 7,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 11,
+          "committed": 12
+        },
+        "cards": {
+          "yellow": 2,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 512,
+      "name": "Jeong Woo-Yeong",
+      "firstname": "Woo-Yeong",
+      "lastname": "Jeong",
+      "age": 26,
+      "birth": {
+        "date": "1999-09-20",
+        "place": "Ulsan",
+        "country": "Korea Republic"
+      },
+      "nationality": "Korea Republic",
+      "height": "179",
+      "weight": "71",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/512.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 182,
+          "name": "Union Berlin",
+          "logo": "https://media.api-sports.io/football/teams/182.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 23,
+          "lineups": 17,
+          "minutes": 1272,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.886363",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 6,
+          "out": 16,
+          "bench": 6
+        },
+        "shots": {
+          "total": 14,
+          "on": 6
+        },
+        "goals": {
+          "total": 3,
+          "conceded": 0,
+          "assists": 2,
+          "saves": null
+        },
+        "passes": {
+          "total": 466,
+          "key": 18,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 10,
+          "blocks": 1,
+          "interceptions": 11
+        },
+        "duels": {
+          "total": 126,
+          "won": 51
+        },
+        "dribbles": {
+          "attempts": 20,
+          "success": 12,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 15,
+          "committed": 16
+        },
+        "cards": {
+          "yellow": 2,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      },
+      {
+        "team": {
+          "id": 172,
+          "name": "VfB Stuttgart",
+          "logo": "https://media.api-sports.io/football/teams/172.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 0,
+          "lineups": 0,
+          "minutes": 0,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.886363",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 0
+        },
+        "shots": {
+          "total": 14,
+          "on": 6
+        },
+        "goals": {
+          "total": 0,
+          "conceded": 0,
+          "assists": 2,
+          "saves": null
+        },
+        "passes": {
+          "total": 466,
+          "key": 18,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 10,
+          "blocks": 1,
+          "interceptions": 11
+        },
+        "duels": {
+          "total": 126,
+          "won": 51
+        },
+        "dribbles": {
+          "attempts": 20,
+          "success": 12,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 15,
+          "committed": 16
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 522,
+      "name": "T. M\u00fcller",
+      "firstname": "Thomas",
+      "lastname": "M\u00fcller",
+      "age": 36,
+      "birth": {
+        "date": "1989-09-13",
+        "place": "Weilheim",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "185",
+      "weight": "76",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/522.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 34,
+          "lineups": 24,
+          "minutes": 1255,
+          "number": null,
+          "position": "Attacker",
+          "rating": "6.864285",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 10,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 24,
+          "on": 11
+        },
+        "goals": {
+          "total": 1,
+          "conceded": 0,
+          "assists": 4,
+          "saves": null
+        },
+        "passes": {
+          "total": 570,
+          "key": 35,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 9,
+          "blocks": null,
+          "interceptions": 2
+        },
+        "duels": {
+          "total": 131,
+          "won": 49
+        },
+        "dribbles": {
+          "attempts": 17,
+          "success": 9,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 12,
+          "committed": 14
+        },
+        "cards": {
+          "yellow": 3,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 532,
+      "name": "M. de Ligt",
+      "firstname": "Matthijs",
+      "lastname": "de Ligt",
+      "age": 26,
+      "birth": {
+        "date": "1999-08-12",
+        "place": "Leiderdorp",
+        "country": "Netherlands"
+      },
+      "nationality": "Netherlands",
+      "height": "187",
+      "weight": "89",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/532.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 0,
+          "lineups": 0,
+          "minutes": 0,
+          "number": null,
+          "position": "Defender",
+          "rating": null,
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 0
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": null,
+          "assists": null,
+          "saves": null
+        },
+        "passes": {
+          "total": null,
+          "key": null,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": null,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": null,
+          "missed": null,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 533,
+      "name": "R. Kristensen",
+      "firstname": "Rasmus",
+      "lastname": "Nissen Kristensen",
+      "age": 28,
+      "birth": {
+        "date": "1997-07-11",
+        "place": "Brande",
+        "country": "Denmark"
+      },
+      "nationality": "Denmark",
+      "height": "187",
+      "weight": "70",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/533.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 169,
+          "name": "Eintracht Frankfurt",
+          "logo": "https://media.api-sports.io/football/teams/169.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 30,
+          "lineups": 28,
+          "minutes": 2515,
+          "number": null,
+          "position": "Defender",
+          "rating": "7.106666",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 2,
+          "out": 4,
+          "bench": 2
+        },
+        "shots": {
+          "total": 16,
+          "on": 8
+        },
+        "goals": {
+          "total": 5,
+          "conceded": 0,
+          "assists": 3,
+          "saves": null
+        },
+        "passes": {
+          "total": 1359,
+          "key": 22,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 60,
+          "blocks": 13,
+          "interceptions": 20
+        },
+        "duels": {
+          "total": 258,
+          "won": 138
+        },
+        "dribbles": {
+          "attempts": 45,
+          "success": 22,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 12,
+          "committed": 25
+        },
+        "cards": {
+          "yellow": 4,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 539,
+      "name": "D. de Wit",
+      "firstname": "Dani",
+      "lastname": "de Wit",
+      "age": 27,
+      "birth": {
+        "date": "1998-01-28",
+        "place": "Hoorn",
+        "country": "Netherlands"
+      },
+      "nationality": "Netherlands",
+      "height": "184",
+      "weight": "76",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/539.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 176,
+          "name": "VfL Bochum",
+          "logo": "https://media.api-sports.io/football/teams/176.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 33,
+          "lineups": 22,
+          "minutes": 1167,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.636000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 11,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 15,
+          "on": 7
+        },
+        "goals": {
+          "total": 2,
+          "conceded": 0,
+          "assists": 1,
+          "saves": null
+        },
+        "passes": {
+          "total": 393,
+          "key": 10,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 29,
+          "blocks": 4,
+          "interceptions": 12
+        },
+        "duels": {
+          "total": 174,
+          "won": 83
+        },
+        "dribbles": {
+          "attempts": 7,
+          "success": 1,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 12,
+          "committed": 24
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 545,
+      "name": "N. Mazraoui",
+      "firstname": "Noussair",
+      "lastname": "Mazraoui",
+      "age": 28,
+      "birth": {
+        "date": "1997-11-14",
+        "place": "Leiderdorp",
+        "country": "Netherlands"
+      },
+      "nationality": "Morocco",
+      "height": "183",
+      "weight": "63",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/545.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 0,
+          "lineups": 0,
+          "minutes": 0,
+          "number": null,
+          "position": "Defender",
+          "rating": null,
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 0
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": null,
+          "assists": null,
+          "saves": null
+        },
+        "passes": {
+          "total": null,
+          "key": null,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": null,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": null,
+          "missed": null,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 549,
+      "name": "V. \u010cern\u00fd",
+      "firstname": "V\u00e1clav",
+      "lastname": "\u010cern\u00fd",
+      "age": 28,
+      "birth": {
+        "date": "1997-10-17",
+        "place": "P\u0159\u00edbram",
+        "country": "Czechia"
+      },
+      "nationality": "Czechia",
+      "height": "182",
+      "weight": "68",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/549.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 161,
+          "name": "VfL Wolfsburg",
+          "logo": "https://media.api-sports.io/football/teams/161.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 0,
+          "lineups": 0,
+          "minutes": 0,
+          "number": null,
+          "position": "Midfielder",
+          "rating": null,
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 0
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": null,
+          "assists": null,
+          "saves": null
+        },
+        "passes": {
+          "total": null,
+          "key": null,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": null,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": null,
+          "missed": null,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 563,
+      "name": "\u00c1lex Grimaldo",
+      "firstname": "Alejandro",
+      "lastname": "Grimaldo Garc\u00eda",
+      "age": 30,
+      "birth": {
+        "date": "1995-09-20",
+        "place": "Valencia",
+        "country": "Spain"
+      },
+      "nationality": "Spain",
+      "height": "171",
+      "weight": "63",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/563.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 168,
+          "name": "Bayer Leverkusen",
+          "logo": "https://media.api-sports.io/football/teams/168.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 32,
+          "lineups": 31,
+          "minutes": 2642,
+          "number": null,
+          "position": "Defender",
+          "rating": "7.293750",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 1,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 30,
+          "on": 14
+        },
+        "goals": {
+          "total": 2,
+          "conceded": 0,
+          "assists": 7,
+          "saves": null
+        },
+        "passes": {
+          "total": 1729,
+          "key": 73,
+          "accuracy": 46
+        },
+        "tackles": {
+          "total": 24,
+          "blocks": 3,
+          "interceptions": 16
+        },
+        "duels": {
+          "total": 177,
+          "won": 85
+        },
+        "dribbles": {
+          "attempts": 45,
+          "success": 20,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 25,
+          "committed": 15
+        },
+        "cards": {
+          "yellow": 6,
+          "yellowred": null,
+          "red": 1
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 637,
+      "name": "F. Nmecha",
+      "firstname": "Felix Kalu",
+      "lastname": "Nmecha",
+      "age": 25,
+      "birth": {
+        "date": "2000-10-10",
+        "place": "Hamburg",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "190",
+      "weight": "73",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/637.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 165,
+          "name": "Borussia Dortmund",
+          "logo": "https://media.api-sports.io/football/teams/165.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 26,
+          "lineups": 23,
+          "minutes": 1512,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "7.061538",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 3,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 11,
+          "on": 6
+        },
+        "goals": {
+          "total": 4,
+          "conceded": 0,
+          "assists": 1,
+          "saves": null
+        },
+        "passes": {
+          "total": 898,
+          "key": 14,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 35,
+          "blocks": 5,
+          "interceptions": 23
+        },
+        "duels": {
+          "total": 171,
+          "won": 101
+        },
+        "dribbles": {
+          "attempts": 21,
+          "success": 17,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 26,
+          "committed": 22
+        },
+        "cards": {
+          "yellow": 3,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 644,
+      "name": "L. San\u00e9",
+      "firstname": "Leroy Aziz",
+      "lastname": "San\u00e9",
+      "age": 30,
+      "birth": {
+        "date": "1996-01-11",
+        "place": "Essen",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "183",
+      "weight": "80",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/644.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 30,
+          "lineups": 23,
+          "minutes": 1633,
+          "number": null,
+          "position": "Forward",
+          "rating": "7.163333",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 7,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 50,
+          "on": 30
+        },
+        "goals": {
+          "total": 11,
+          "conceded": 0,
+          "assists": 5,
+          "saves": null
+        },
+        "passes": {
+          "total": 849,
+          "key": 37,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 22,
+          "blocks": null,
+          "interceptions": 7
+        },
+        "duels": {
+          "total": 206,
+          "won": 92
+        },
+        "dribbles": {
+          "attempts": 93,
+          "success": 38,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 25,
+          "committed": 16
+        },
+        "cards": {
+          "yellow": 2,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 663,
+      "name": "M. Terrier",
+      "firstname": "Martin Albert Fr\u00e9d\u00e9ric",
+      "lastname": "Terrier",
+      "age": 28,
+      "birth": {
+        "date": "1997-03-04",
+        "place": "Armenti\u00e8res",
+        "country": "France"
+      },
+      "nationality": "France",
+      "height": "184",
+      "weight": "71",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/663.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 168,
+          "name": "Bayer Leverkusen",
+          "logo": "https://media.api-sports.io/football/teams/168.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 15,
+          "lineups": 9,
+          "minutes": 583,
+          "number": null,
+          "position": "Attacker",
+          "rating": "6.950000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 6,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 12,
+          "on": 6
+        },
+        "goals": {
+          "total": 2,
+          "conceded": 0,
+          "assists": 1,
+          "saves": null
+        },
+        "passes": {
+          "total": 191,
+          "key": 9,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 4,
+          "blocks": null,
+          "interceptions": 1
+        },
+        "duels": {
+          "total": 52,
+          "won": 26
+        },
+        "dribbles": {
+          "attempts": 4,
+          "success": 2,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 9,
+          "committed": 2
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 664,
+      "name": "L. Tousart",
+      "firstname": "Lucas Simon Pierre",
+      "lastname": "Tousart",
+      "age": 28,
+      "birth": {
+        "date": "1997-04-29",
+        "place": "Arras",
+        "country": "France"
+      },
+      "nationality": "France",
+      "height": "185",
+      "weight": "83",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/664.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 182,
+          "name": "Union Berlin",
+          "logo": "https://media.api-sports.io/football/teams/182.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 15,
+          "lineups": 6,
+          "minutes": 557,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.738461",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 9,
+          "out": 6,
+          "bench": 20
+        },
+        "shots": {
+          "total": 7,
+          "on": 5
+        },
+        "goals": {
+          "total": 0,
+          "conceded": 0,
+          "assists": 1,
+          "saves": null
+        },
+        "passes": {
+          "total": 157,
+          "key": 3,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 17,
+          "blocks": 4,
+          "interceptions": 6
+        },
+        "duels": {
+          "total": 93,
+          "won": 48
+        },
+        "dribbles": {
+          "attempts": 11,
+          "success": 5,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 6,
+          "committed": 11
+        },
+        "cards": {
+          "yellow": 2,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 683,
+      "name": "I. Ordets",
+      "firstname": "Ivan",
+      "lastname": "Ordets",
+      "age": 33,
+      "birth": {
+        "date": "1992-07-08",
+        "place": "Blyzhne",
+        "country": "Ukraine"
+      },
+      "nationality": "Ukraine",
+      "height": "194 cm",
+      "weight": "88 kg",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/683.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 176,
+          "name": "VfL Bochum",
+          "logo": "https://media.api-sports.io/football/teams/176.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 22,
+          "lineups": 21,
+          "minutes": 1862,
+          "number": null,
+          "position": "Defender",
+          "rating": "7.042857",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 1,
+          "out": 4,
+          "bench": 3
+        },
+        "shots": {
+          "total": 5,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 877,
+          "key": 7,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 18,
+          "blocks": 16,
+          "interceptions": 41
+        },
+        "duels": {
+          "total": 202,
+          "won": 134
+        },
+        "dribbles": {
+          "attempts": 1,
+          "success": 1,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 19,
+          "committed": 22
+        },
+        "cards": {
+          "yellow": 6,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 702,
+      "name": "O. Baumann",
+      "firstname": "Oliver",
+      "lastname": "Baumann",
+      "age": 35,
+      "birth": {
+        "date": "1990-06-02",
+        "place": "Breisach",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "187",
+      "weight": "82",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/702.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 167,
+          "name": "1899 Hoffenheim",
+          "logo": "https://media.api-sports.io/football/teams/167.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 28,
+          "lineups": 28,
+          "minutes": 2520,
+          "number": null,
+          "position": "Goalkeeper",
+          "rating": "7.014285",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": null,
+          "conceded": 53,
+          "assists": 0,
+          "saves": 92
+        },
+        "passes": {
+          "total": 940,
+          "key": 3,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 2,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": 20,
+          "won": 18
+        },
+        "dribbles": {
+          "attempts": 1,
+          "success": 1,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 6,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": 2
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 709,
+      "name": "P. Kade\u0159\u00e1bek",
+      "firstname": "Pavel",
+      "lastname": "Kade\u0159\u00e1bek",
+      "age": 33,
+      "birth": {
+        "date": "1992-04-25",
+        "place": "Praha",
+        "country": "Czechia"
+      },
+      "nationality": "Czechia",
+      "height": "182",
+      "weight": "81",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/709.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 167,
+          "name": "1899 Hoffenheim",
+          "logo": "https://media.api-sports.io/football/teams/167.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 24,
+          "lineups": 18,
+          "minutes": 1576,
+          "number": null,
+          "position": "Defender",
+          "rating": "6.754166",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 6,
+          "out": 6,
+          "bench": 10
+        },
+        "shots": {
+          "total": 11,
+          "on": 3
+        },
+        "goals": {
+          "total": 2,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 627,
+          "key": 21,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 25,
+          "blocks": 3,
+          "interceptions": 20
+        },
+        "duels": {
+          "total": 182,
+          "won": 95
+        },
+        "dribbles": {
+          "attempts": 8,
+          "success": 5,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 8,
+          "committed": 21
+        },
+        "cards": {
+          "yellow": 6,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 713,
+      "name": "K. Vogt",
+      "firstname": "Kevin",
+      "lastname": "Vogt",
+      "age": 34,
+      "birth": {
+        "date": "1991-09-23",
+        "place": "Witten",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "194",
+      "weight": "87",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/713.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 182,
+          "name": "Union Berlin",
+          "logo": "https://media.api-sports.io/football/teams/182.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 18,
+          "lineups": 16,
+          "minutes": 1371,
+          "number": null,
+          "position": "Defender",
+          "rating": "6.872222",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 2,
+          "out": 6,
+          "bench": 7
+        },
+        "shots": {
+          "total": 1,
+          "on": 1
+        },
+        "goals": {
+          "total": 1,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 892,
+          "key": 2,
+          "accuracy": 43
+        },
+        "tackles": {
+          "total": 12,
+          "blocks": 8,
+          "interceptions": 9
+        },
+        "duels": {
+          "total": 68,
+          "won": 37
+        },
+        "dribbles": {
+          "attempts": 5,
+          "success": 4,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 7,
+          "committed": 10
+        },
+        "cards": {
+          "yellow": 6,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 1,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 714,
+      "name": "N. Amiri",
+      "firstname": "Nadiem",
+      "lastname": "Amiri",
+      "age": 29,
+      "birth": {
+        "date": "1996-10-27",
+        "place": "Ludwigshafen am Rhein",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "180",
+      "weight": "75",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/714.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 164,
+          "name": "FSV Mainz 05",
+          "logo": "https://media.api-sports.io/football/teams/164.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 30,
+          "lineups": 30,
+          "minutes": 2481,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "7.326666",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 44,
+          "on": 26
+        },
+        "goals": {
+          "total": 7,
+          "conceded": 0,
+          "assists": 5,
+          "saves": null
+        },
+        "passes": {
+          "total": 1587,
+          "key": 63,
+          "accuracy": 43
+        },
+        "tackles": {
+          "total": 50,
+          "blocks": 4,
+          "interceptions": 18
+        },
+        "duels": {
+          "total": 293,
+          "won": 148
+        },
+        "dribbles": {
+          "attempts": 64,
+          "success": 31,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 51,
+          "committed": 44
+        },
+        "cards": {
+          "yellow": 9,
+          "yellowred": null,
+          "red": 2
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 2,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 715,
+      "name": "C. Baumgartner",
+      "firstname": "Christoph",
+      "lastname": "Baumgartner",
+      "age": 26,
+      "birth": {
+        "date": "1999-08-01",
+        "place": "Horn",
+        "country": "Austria"
+      },
+      "nationality": "Austria",
+      "height": "180",
+      "weight": "73",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/715.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 173,
+          "name": "RB Leipzig",
+          "logo": "https://media.api-sports.io/football/teams/173.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 32,
+          "lineups": 23,
+          "minutes": 1623,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.780645",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 9,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 29,
+          "on": 15
+        },
+        "goals": {
+          "total": 2,
+          "conceded": 0,
+          "assists": 1,
+          "saves": null
+        },
+        "passes": {
+          "total": 586,
+          "key": 20,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 43,
+          "blocks": 9,
+          "interceptions": 12
+        },
+        "duels": {
+          "total": 286,
+          "won": 130
+        },
+        "dribbles": {
+          "attempts": 35,
+          "success": 17,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 29,
+          "committed": 44
+        },
+        "cards": {
+          "yellow": 5,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 716,
+      "name": "L. Bittencourt",
+      "firstname": "Leonardo Jesus",
+      "lastname": "Loureiro Bittencourt",
+      "age": 32,
+      "birth": {
+        "date": "1993-12-19",
+        "place": "Leipzig",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "171",
+      "weight": "63",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/716.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 162,
+          "name": "Werder Bremen",
+          "logo": "https://media.api-sports.io/football/teams/162.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 27,
+          "lineups": 10,
+          "minutes": 973,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.785185",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 17,
+          "out": 8,
+          "bench": 21
+        },
+        "shots": {
+          "total": 23,
+          "on": 9
+        },
+        "goals": {
+          "total": 2,
+          "conceded": 0,
+          "assists": 1,
+          "saves": null
+        },
+        "passes": {
+          "total": 654,
+          "key": 15,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 24,
+          "blocks": null,
+          "interceptions": 15
+        },
+        "duels": {
+          "total": 94,
+          "won": 49
+        },
+        "dribbles": {
+          "attempts": 4,
+          "success": 1,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 19,
+          "committed": 15
+        },
+        "cards": {
+          "yellow": 3,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 718,
+      "name": "D. Geiger",
+      "firstname": "Dennis",
+      "lastname": "Geiger",
+      "age": 27,
+      "birth": {
+        "date": "1998-06-10",
+        "place": "Mosbach",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "173",
+      "weight": "67",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/718.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 167,
+          "name": "1899 Hoffenheim",
+          "logo": "https://media.api-sports.io/football/teams/167.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 25,
+          "lineups": 15,
+          "minutes": 744,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.642105",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 10,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 4,
+          "on": 1
+        },
+        "goals": {
+          "total": null,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 354,
+          "key": 11,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 24,
+          "blocks": 2,
+          "interceptions": 7
+        },
+        "duels": {
+          "total": 85,
+          "won": 40
+        },
+        "dribbles": {
+          "attempts": 6,
+          "success": 4,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 10,
+          "committed": 26
+        },
+        "cards": {
+          "yellow": 4,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 719,
+      "name": "F. Grillitsch",
+      "firstname": "Florian",
+      "lastname": "Grillitsch",
+      "age": 31,
+      "birth": {
+        "date": "1995-08-07",
+        "place": "Neunkirchen",
+        "country": "Austria"
+      },
+      "nationality": "Austria",
+      "height": "187",
+      "weight": "77",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/719.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 167,
+          "name": "1899 Hoffenheim",
+          "logo": "https://media.api-sports.io/football/teams/167.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 8,
+          "lineups": 8,
+          "minutes": 604,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.925000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 4,
+          "on": 1
+        },
+        "goals": {
+          "total": null,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 412,
+          "key": 5,
+          "accuracy": 44
+        },
+        "tackles": {
+          "total": 15,
+          "blocks": 2,
+          "interceptions": 8
+        },
+        "duels": {
+          "total": 78,
+          "won": 38
+        },
+        "dribbles": {
+          "attempts": 10,
+          "success": 5,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 11,
+          "committed": 4
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 725,
+      "name": "R. Hack",
+      "firstname": "Robin",
+      "lastname": "Hack",
+      "age": 27,
+      "birth": {
+        "date": "1998-08-27",
+        "place": "Pforzheim",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "176",
+      "weight": "68",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/725.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 163,
+          "name": "Borussia M\u00f6nchengladbach",
+          "logo": "https://media.api-sports.io/football/teams/163.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 34,
+          "lineups": 30,
+          "minutes": 2189,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.966666",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 4,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 46,
+          "on": 24
+        },
+        "goals": {
+          "total": 4,
+          "conceded": 0,
+          "assists": 7,
+          "saves": null
+        },
+        "passes": {
+          "total": 810,
+          "key": 32,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 21,
+          "blocks": 2,
+          "interceptions": 9
+        },
+        "duels": {
+          "total": 219,
+          "won": 86
+        },
+        "dribbles": {
+          "attempts": 57,
+          "success": 25,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 21,
+          "committed": 19
+        },
+        "cards": {
+          "yellow": 4,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 726,
+      "name": "A. Kramari\u0107",
+      "firstname": "Andrej",
+      "lastname": "Kramari\u0107",
+      "age": 34,
+      "birth": {
+        "date": "1991-06-19",
+        "place": "Zagreb",
+        "country": "Croatia"
+      },
+      "nationality": "Croatia",
+      "height": "177",
+      "weight": "73",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/726.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 167,
+          "name": "1899 Hoffenheim",
+          "logo": "https://media.api-sports.io/football/teams/167.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 32,
+          "lineups": 32,
+          "minutes": 2782,
+          "number": null,
+          "position": "Attacker",
+          "rating": "7.168750",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 14,
+          "bench": 0
+        },
+        "shots": {
+          "total": 55,
+          "on": 26
+        },
+        "goals": {
+          "total": 11,
+          "conceded": 0,
+          "assists": 8,
+          "saves": null
+        },
+        "passes": {
+          "total": 1166,
+          "key": 50,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 15,
+          "blocks": 3,
+          "interceptions": 7
+        },
+        "duels": {
+          "total": 171,
+          "won": 71
+        },
+        "dribbles": {
+          "attempts": 42,
+          "success": 20,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 28,
+          "committed": 12
+        },
+        "cards": {
+          "yellow": 4,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 3,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 794,
+      "name": "P. Schick",
+      "firstname": "Patrik",
+      "lastname": "Schick",
+      "age": 29,
+      "birth": {
+        "date": "1996-01-24",
+        "place": "Praha",
+        "country": "Czechia"
+      },
+      "nationality": "Czechia",
+      "height": "191",
+      "weight": "87",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/794.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 168,
+          "name": "Bayer Leverkusen",
+          "logo": "https://media.api-sports.io/football/teams/168.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 33,
+          "lineups": 26,
+          "minutes": 1693,
+          "number": null,
+          "position": "Attacker",
+          "rating": "7.183333",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 7,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 58,
+          "on": 34
+        },
+        "goals": {
+          "total": 21,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 367,
+          "key": 11,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 6,
+          "blocks": 1,
+          "interceptions": 4
+        },
+        "duels": {
+          "total": 208,
+          "won": 83
+        },
+        "dribbles": {
+          "attempts": 23,
+          "success": 9,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 23,
+          "committed": 24
+        },
+        "cards": {
+          "yellow": 4,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 1,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 864,
+      "name": "E. Can",
+      "firstname": "Emre",
+      "lastname": "Can",
+      "age": 31,
+      "birth": {
+        "date": "1994-01-12",
+        "place": "Frankfurt am Main",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "186",
+      "weight": "86",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/864.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 165,
+          "name": "Borussia Dortmund",
+          "logo": "https://media.api-sports.io/football/teams/165.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 31,
+          "lineups": 23,
+          "minutes": 2101,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "6.925806",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 8,
+          "out": 3,
+          "bench": 8
+        },
+        "shots": {
+          "total": 7,
+          "on": 3
+        },
+        "goals": {
+          "total": 3,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 1875,
+          "key": 8,
+          "accuracy": 54
+        },
+        "tackles": {
+          "total": 48,
+          "blocks": 17,
+          "interceptions": 20
+        },
+        "duels": {
+          "total": 211,
+          "won": 124
+        },
+        "dribbles": {
+          "attempts": 24,
+          "success": 14,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 19,
+          "committed": 25
+        },
+        "cards": {
+          "yellow": 4,
+          "yellowred": 0,
+          "red": 1
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 2,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 963,
+      "name": "L. Hr\u00e1deck\u00fd",
+      "firstname": "Luk\u00e1\u0161",
+      "lastname": "Hr\u00e1deck\u00fd",
+      "age": 36,
+      "birth": {
+        "date": "1989-11-24",
+        "place": "Bratislava",
+        "country": "Slovakia"
+      },
+      "nationality": "Finland",
+      "height": "192",
+      "weight": "83",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/963.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 168,
+          "name": "Bayer Leverkusen",
+          "logo": "https://media.api-sports.io/football/teams/168.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 29,
+          "lineups": 29,
+          "minutes": 2610,
+          "number": null,
+          "position": "Goalkeeper",
+          "rating": "6.955172",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 4
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": 38,
+          "assists": 0,
+          "saves": 85
+        },
+        "passes": {
+          "total": 799,
+          "key": null,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": 5,
+          "won": 3
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 2,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": 1
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 972,
+      "name": "J. Tah",
+      "firstname": "Jonathan",
+      "lastname": "Glao Tah",
+      "age": 29,
+      "birth": {
+        "date": "1996-02-11",
+        "place": "Hamburg",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "195",
+      "weight": "94",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/972.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 168,
+          "name": "Bayer Leverkusen",
+          "logo": "https://media.api-sports.io/football/teams/168.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 33,
+          "lineups": 33,
+          "minutes": 2970,
+          "number": null,
+          "position": "Defender",
+          "rating": "7.103030",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 0
+        },
+        "shots": {
+          "total": 16,
+          "on": 7
+        },
+        "goals": {
+          "total": 3,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 2294,
+          "key": 5,
+          "accuracy": 64
+        },
+        "tackles": {
+          "total": 19,
+          "blocks": 16,
+          "interceptions": 36
+        },
+        "duels": {
+          "total": 161,
+          "won": 103
+        },
+        "dribbles": {
+          "attempts": 5,
+          "success": 3,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 5,
+          "committed": 16
+        },
+        "cards": {
+          "yellow": 3,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      },
+      {
+        "team": {
+          "id": 157,
+          "name": "Bayern M\u00fcnchen",
+          "logo": "https://media.api-sports.io/football/teams/157.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 33,
+          "lineups": 33,
+          "minutes": 2970,
+          "number": null,
+          "position": "Defender",
+          "rating": "7.103030",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 16,
+          "on": 7
+        },
+        "goals": {
+          "total": 3,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 2294,
+          "key": 5,
+          "accuracy": 64
+        },
+        "tackles": {
+          "total": 19,
+          "blocks": 16,
+          "interceptions": 36
+        },
+        "duels": {
+          "total": 161,
+          "won": 103
+        },
+        "dribbles": {
+          "attempts": 5,
+          "success": 3,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 5,
+          "committed": 16
+        },
+        "cards": {
+          "yellow": 3,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 973,
+      "name": "M. Weiser",
+      "firstname": "Mitchell-Elijah",
+      "lastname": "Weiser",
+      "age": 31,
+      "birth": {
+        "date": "1994-04-21",
+        "place": "Troisdorf",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "177",
+      "weight": "70",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/973.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 162,
+          "name": "Werder Bremen",
+          "logo": "https://media.api-sports.io/football/teams/162.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 32,
+          "lineups": 32,
+          "minutes": 2870,
+          "number": null,
+          "position": "Defender",
+          "rating": "7.068750",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 1,
+          "bench": 0
+        },
+        "shots": {
+          "total": 34,
+          "on": 15
+        },
+        "goals": {
+          "total": 5,
+          "conceded": 0,
+          "assists": 8,
+          "saves": null
+        },
+        "passes": {
+          "total": 1212,
+          "key": 42,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 62,
+          "blocks": 3,
+          "interceptions": 22
+        },
+        "duels": {
+          "total": 351,
+          "won": 168
+        },
+        "dribbles": {
+          "attempts": 76,
+          "success": 31,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 45,
+          "committed": 30
+        },
+        "cards": {
+          "yellow": 8,
+          "yellowred": 1,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 979,
+      "name": "D. Kohr",
+      "firstname": "Dominik",
+      "lastname": "Kohr",
+      "age": 31,
+      "birth": {
+        "date": "1994-01-31",
+        "place": "Trier",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "183",
+      "weight": "77",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/979.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 164,
+          "name": "FSV Mainz 05",
+          "logo": "https://media.api-sports.io/football/teams/164.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 28,
+          "lineups": 28,
+          "minutes": 2306,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "7.053571",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 9,
+          "bench": 0
+        },
+        "shots": {
+          "total": 12,
+          "on": 5
+        },
+        "goals": {
+          "total": 2,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 1311,
+          "key": 12,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 62,
+          "blocks": 24,
+          "interceptions": 43
+        },
+        "duels": {
+          "total": 251,
+          "won": 141
+        },
+        "dribbles": {
+          "attempts": 9,
+          "success": 5,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 36,
+          "committed": 46
+        },
+        "cards": {
+          "yellow": 11,
+          "yellowred": 0,
+          "red": 1
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 984,
+      "name": "J. Brandt",
+      "firstname": "Julian",
+      "lastname": "Brandt",
+      "age": 29,
+      "birth": {
+        "date": "1996-05-02",
+        "place": "Bremen",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "185",
+      "weight": "83",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/984.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 165,
+          "name": "Borussia Dortmund",
+          "logo": "https://media.api-sports.io/football/teams/165.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 30,
+          "lineups": 29,
+          "minutes": 2318,
+          "number": null,
+          "position": "Midfielder",
+          "rating": "7.110344",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 1,
+          "out": null,
+          "bench": null
+        },
+        "shots": {
+          "total": 34,
+          "on": 15
+        },
+        "goals": {
+          "total": 5,
+          "conceded": 0,
+          "assists": 10,
+          "saves": null
+        },
+        "passes": {
+          "total": 1116,
+          "key": 62,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 26,
+          "blocks": null,
+          "interceptions": 14
+        },
+        "duels": {
+          "total": 196,
+          "won": 64
+        },
+        "dribbles": {
+          "attempts": 49,
+          "success": 18,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 9,
+          "committed": 8
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": null,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 989,
+      "name": "K. Volland",
+      "firstname": "Kevin",
+      "lastname": "Volland",
+      "age": 33,
+      "birth": {
+        "date": "1992-07-30",
+        "place": "Marktoberdorf",
+        "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "174 cm",
+      "weight": "85 kg",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/989.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 182,
+          "name": "Union Berlin",
+          "logo": "https://media.api-sports.io/football/teams/182.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 4,
+          "lineups": 0,
+          "minutes": 57,
+          "number": null,
+          "position": "Attacker",
+          "rating": "6.550000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 4,
+          "out": 0,
+          "bench": 13
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 14,
+          "key": 1,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": 9,
+          "won": 3
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": null,
+          "committed": 3
+        },
+        "cards": {
+          "yellow": 1,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 1082,
+      "name": "S. Lainer",
+      "firstname": "Stefan",
+      "lastname": "Lainer",
+      "age": 33,
+      "birth": {
+        "date": "1992-08-27",
+        "place": "Salzburg",
+        "country": "Austria"
+      },
+      "nationality": "Austria",
+      "height": "175",
+      "weight": "73",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/1082.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 163,
+          "name": "Borussia M\u00f6nchengladbach",
+          "logo": "https://media.api-sports.io/football/teams/163.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 21,
+          "lineups": 6,
+          "minutes": 744,
+          "number": null,
+          "position": "Defender",
+          "rating": "6.640000",
+          "captain": false
+        },
+        "substitutes": {
+          "in": 15,
+          "out": 1,
+          "bench": 27
+        },
+        "shots": {
+          "total": 3,
+          "on": 1
+        },
+        "goals": {
+          "total": 1,
+          "conceded": 0,
+          "assists": 0,
+          "saves": null
+        },
+        "passes": {
+          "total": 358,
+          "key": 9,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": 22,
+          "blocks": 6,
+          "interceptions": 12
+        },
+        "duels": {
+          "total": 72,
+          "won": 38
+        },
+        "dribbles": {
+          "attempts": 10,
+          "success": 5,
+          "past": null
+        },
+        "fouls": {
+          "drawn": 6,
+          "committed": 11
+        },
+        "cards": {
+          "yellow": 2,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": 0,
+          "missed": 0,
+          "saved": null
+        }
+      }
+    ]
+  },
+  {
+    "player": {
+      "id": 1083,
+      "name": "J. Ongu\u00e9n\u00e9",
+      "firstname": "J\u00e9r\u00f4me Junior",
+      "lastname": "Ongu\u00e9n\u00e9",
+      "age": 28,
+      "birth": {
+        "date": "1997-12-22",
+        "place": "Mbalmayo",
+        "country": "Cameroon"
+      },
+      "nationality": "Cameroon",
+      "height": "186 cm",
+      "weight": "78 kg",
+      "injured": false,
+      "photo": "https://media.api-sports.io/football/players/1083.png"
+    },
+    "statistics": [
+      {
+        "team": {
+          "id": 169,
+          "name": "Eintracht Frankfurt",
+          "logo": "https://media.api-sports.io/football/teams/169.png"
+        },
+        "league": {
+          "id": 78,
+          "name": "Bundesliga",
+          "country": "Germany",
+          "logo": "https://media.api-sports.io/football/leagues/78.png",
+          "flag": "https://media.api-sports.io/flags/de.svg",
+          "season": 2024
+        },
+        "games": {
+          "appearences": 0,
+          "lineups": 0,
+          "minutes": 0,
+          "number": null,
+          "position": "Defender",
+          "rating": null,
+          "captain": false
+        },
+        "substitutes": {
+          "in": 0,
+          "out": 0,
+          "bench": 0
+        },
+        "shots": {
+          "total": null,
+          "on": null
+        },
+        "goals": {
+          "total": 0,
+          "conceded": null,
+          "assists": null,
+          "saves": null
+        },
+        "passes": {
+          "total": null,
+          "key": null,
+          "accuracy": null
+        },
+        "tackles": {
+          "total": null,
+          "blocks": null,
+          "interceptions": null
+        },
+        "duels": {
+          "total": null,
+          "won": null
+        },
+        "dribbles": {
+          "attempts": null,
+          "success": null,
+          "past": null
+        },
+        "fouls": {
+          "drawn": null,
+          "committed": null
+        },
+        "cards": {
+          "yellow": 0,
+          "yellowred": 0,
+          "red": 0
+        },
+        "penalty": {
+          "won": null,
+          "commited": null,
+          "scored": null,
+          "missed": null,
+          "saved": null
+        }
+      }
+    ]
+  }
+]
