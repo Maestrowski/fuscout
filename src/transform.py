@@ -6,13 +6,21 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 RAW_DATA_DIR = BASE_DIR / "data" / "raw"
 
-# Define statistical definitions and weights for each sub-role
+TOP_5_LEAGUES = [
+    "Premier League",
+    "Bundesliga",
+    "La Liga",
+    "Ligue 1",
+    "Serie A"
+]
+
+# Tactical Sub-Role Definitions using robust per-90 metrics
 ROLE_METRIC_MAP = {
     # Attackers
     "Poacher": {
         "position": "Attacker",
-        "metrics": ["goals_per_90", "shots_on_target_per_90", "shot_accuracy"],
-        "weights": [0.45, 0.35, 0.20],
+        "metrics": ["goals_per_90", "shots_on_target_per_90", "shots_per_90"],
+        "weights": [0.50, 0.35, 0.15],
         "higher_is_better": [True, True, True]
     },
     "Target Man": {
@@ -61,8 +69,8 @@ ROLE_METRIC_MAP = {
     },
     "Deep Lying Playmaker": {
         "position": "Midfielder",
-        "metrics": ["passes_per_90", "pass_accuracy", "interceptions_per_90"],
-        "weights": [0.40, 0.35, 0.25],
+        "metrics": ["passes_per_90", "key_passes_per_90", "interceptions_per_90"],
+        "weights": [0.45, 0.35, 0.20],
         "higher_is_better": [True, True, True]
     },
     "Advanced Playmaker": {
@@ -81,8 +89,8 @@ ROLE_METRIC_MAP = {
     # Defenders
     "Ball playing center back": {
         "position": "Defender",
-        "metrics": ["passes_per_90", "pass_accuracy", "interceptions_per_90"],
-        "weights": [0.35, 0.35, 0.30],
+        "metrics": ["passes_per_90", "interceptions_per_90", "blocks_per_90"],
+        "weights": [0.40, 0.35, 0.25],
         "higher_is_better": [True, True, True]
     },
     "Stopper": {
@@ -113,9 +121,9 @@ ROLE_METRIC_MAP = {
     # Goalkeeper
     "Goalkeeper": {
         "position": "Goalkeeper",
-        "metrics": ["saves_per_90", "conceded_per_90", "pass_accuracy"],
-        "weights": [0.50, 0.30, 0.20],
-        "higher_is_better": [True, False, True]  # Low conceded is better
+        "metrics": ["saves_per_90", "conceded_per_90", "passes_per_90"],
+        "weights": [0.50, 0.35, 0.15],
+        "higher_is_better": [True, False, True]
     }
 }
 
@@ -132,87 +140,110 @@ def playerModel(con: duckdb.DuckDBPyConnection):
         SELECT * FROM read_json_auto('{raw_files_pattern}');
     """)
 
+    # 1. Unnest ALL competitions so we can isolate purely Top 5 League stats
     con.execute("""
-        CREATE OR REPLACE TABLE fct_player_stats AS 
+        CREATE OR REPLACE TABLE stg_unnested_stats AS
         SELECT 
             CAST(player.id AS BIGINT) AS player_id,
-            CAST(player.name AS VARCHAR) AS player_name,
+            REPLACE(REPLACE(REPLACE(REPLACE(CAST(player.name AS VARCHAR), '&apos;', ''''), '&#039;', ''''), '&amp;', '&'), '&quot;', '"') AS player_name,
             CAST(COALESCE(player.age, 0) AS INTEGER) AS age,
-            CAST(statistics[1].team.name AS VARCHAR) AS team_name,
-            CAST(statistics[1].league.name AS VARCHAR) AS league_name,
-            CAST(COALESCE(statistics[1].games.position, 'Unknown') AS VARCHAR) AS position,
-            CAST(COALESCE(statistics[1].games.appearences, 0) AS INTEGER) AS appearances,
-            CAST(COALESCE(statistics[1].games.minutes, 0) AS INTEGER) AS minutes_played,
+            CAST(stat.team.name AS VARCHAR) AS team_name,
+            CAST(stat.league.name AS VARCHAR) AS league_name,
+            CAST(COALESCE(stat.games.position, 'Unknown') AS VARCHAR) AS position,
+            CAST(COALESCE(stat.games.appearences, 0) AS INTEGER) AS appearances,
+            CAST(COALESCE(stat.games.minutes, 0) AS INTEGER) AS minutes_played,
+            CAST(stat.games.rating AS FLOAT) AS raw_rating,
+            CAST(COALESCE(stat.goals.total, 0) AS INTEGER) AS total_goals,
+            CAST(COALESCE(stat.goals.assists, 0) AS INTEGER) AS total_assists,
+            CAST(COALESCE(stat.goals.conceded, 0) AS INTEGER) AS goals_conceded,
+            CAST(COALESCE(stat.goals.saves, 0) AS INTEGER) AS total_saves,
+            CAST(COALESCE(stat.shots.total, 0) AS INTEGER) AS total_shots,
+            CAST(COALESCE(stat.shots.on, 0) AS INTEGER) AS total_shots_on,
+            CAST(COALESCE(stat.passes.total, 0) AS INTEGER) AS total_passes,
+            CAST(COALESCE(stat.passes.key, 0) AS INTEGER) AS total_key_passes,
+            CAST(COALESCE(stat.tackles.total, 0) AS INTEGER) AS total_tackles,
+            CAST(COALESCE(stat.tackles.interceptions, 0) AS INTEGER) AS total_interceptions,
+            CAST(COALESCE(stat.tackles.blocks, 0) AS INTEGER) AS total_blocks,
+            CAST(COALESCE(stat.duels.won, 0) AS INTEGER) AS total_duels_won,
+            CAST(COALESCE(stat.fouls.committed, 0) AS INTEGER) AS total_fouls_committed,
+            CAST(COALESCE(stat.fouls.drawn, 0) AS INTEGER) AS total_fouls_drawn,
+            CAST(COALESCE(stat.cards.yellow, 0) AS INTEGER) AS total_yellow_cards,
+            CAST(COALESCE(stat.cards.red, 0) AS INTEGER) AS total_red_cards
+        FROM stg_raw_players,
+        UNNEST(statistics) AS t(stat)
+        WHERE stat.games.minutes IS NOT NULL 
+          AND stat.games.minutes > 0
+          AND stat.league.name IN ('Premier League', 'Bundesliga', 'La Liga', 'Ligue 1', 'Serie A');
+    """)
 
-            -- Overall Weighted Average Match Rating across all competitions
-            ROUND(
-                COALESCE(
-                    list_sum(
-                        list_transform(
-                            list_filter(statistics, x -> x.games.rating IS NOT NULL AND x.games.minutes IS NOT NULL AND x.games.minutes > 0),
-                            x -> CAST(x.games.rating AS FLOAT) * CAST(x.games.minutes AS FLOAT)
-                        )
-                    ) / 
-                    NULLIF(
-                        list_sum(
-                            list_transform(
-                                list_filter(statistics, x -> x.games.rating IS NOT NULL AND x.games.minutes IS NOT NULL AND x.games.minutes > 0),
-                                x -> CAST(x.games.minutes AS FLOAT)
-                            )
-                        ), 0
-                    ),
-                    CAST(statistics[1].games.rating AS FLOAT),
-                    0.0
-                ),
-                2
-            ) AS match_rating,
-            
-            -- Raw Core Metrics
-            CAST(COALESCE(statistics[1].goals.total, 0) AS INTEGER) AS total_goals,
-            CAST(COALESCE(statistics[1].goals.assists, 0) AS INTEGER) AS total_assists,
-            CAST(COALESCE(statistics[1].goals.conceded, 0) AS INTEGER) AS goals_conceded,
-            CAST(COALESCE(statistics[1].goals.saves, 0) AS INTEGER) AS total_saves,
-            CAST(COALESCE(statistics[1].shots.total, 0) AS INTEGER) AS total_shots,
-            CAST(COALESCE(statistics[1].shots.on, 0) AS INTEGER) AS total_shots_on,
-            CAST(COALESCE(statistics[1].passes.total, 0) AS INTEGER) AS total_passes,
-            CAST(COALESCE(statistics[1].passes.key, 0) AS INTEGER) AS total_key_passes,
-            CAST(COALESCE(statistics[1].passes.accuracy, 0) AS FLOAT) AS pass_accuracy,
-            CAST(COALESCE(statistics[1].tackles.total, 0) AS INTEGER) AS total_tackles,
-            CAST(COALESCE(statistics[1].tackles.interceptions, 0) AS INTEGER) AS total_interceptions,
-            CAST(COALESCE(statistics[1].tackles.blocks, 0) AS INTEGER) AS total_blocks,
-            CAST(COALESCE(statistics[1].duels.won, 0) AS INTEGER) AS total_duels_won,
-            CAST(COALESCE(statistics[1].fouls.committed, 0) AS INTEGER) AS total_fouls_committed,
-            CAST(COALESCE(statistics[1].fouls.drawn, 0) AS INTEGER) AS total_fouls_drawn,
-            CAST(COALESCE(statistics[1].cards.yellow, 0) AS INTEGER) AS total_yellow_cards,
-            CAST(COALESCE(statistics[1].cards.red, 0) AS INTEGER) AS total_red_cards,
-
-            -- Derived Per-90 Metrics
-            ROUND((CAST(COALESCE(statistics[1].goals.total, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS goals_per_90,
-            ROUND((CAST(COALESCE(statistics[1].goals.assists, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS assists_per_90,
-            ROUND((CAST(COALESCE(statistics[1].goals.saves, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS saves_per_90,
-            ROUND((CAST(COALESCE(statistics[1].goals.conceded, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS conceded_per_90,
-            ROUND((CAST(COALESCE(statistics[1].shots.total, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS shots_per_90,
-            ROUND((CAST(COALESCE(statistics[1].shots.on, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS shots_on_target_per_90,
-            ROUND((CAST(COALESCE(statistics[1].passes.total, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS passes_per_90,
-            ROUND((CAST(COALESCE(statistics[1].passes.key, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS key_passes_per_90,
-            ROUND((CAST(COALESCE(statistics[1].tackles.total, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS tackles_per_90,
-            ROUND((CAST(COALESCE(statistics[1].tackles.interceptions, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS interceptions_per_90,
-            ROUND((CAST(COALESCE(statistics[1].tackles.blocks, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS blocks_per_90,
-            ROUND((CAST(COALESCE(statistics[1].duels.won, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS duels_won_per_90,
-            ROUND((CAST(COALESCE(statistics[1].fouls.committed, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS fouls_committed_per_90,
-            ROUND((CAST(COALESCE(statistics[1].fouls.drawn, 0) AS FLOAT) / NULLIF(statistics[1].games.minutes, 0)) * 90.0, 2) AS fouls_drawn_per_90,
-            
-            -- Accuracy Ratios
-            ROUND((CAST(COALESCE(statistics[1].shots.on, 0) AS FLOAT) / NULLIF(statistics[1].shots.total, 0)) * 100.0, 1) AS shot_accuracy
-
-        FROM stg_raw_players
-        WHERE statistics[1].games.minutes IS NOT NULL
-          AND statistics[1].games.minutes >= 450;
+    # 2. Aggregate cleanly by player_id and primary club
+    con.execute("""
+        CREATE OR REPLACE TABLE fct_player_stats AS 
+        WITH player_totals AS (
+            SELECT 
+                player_id,
+                MAX(player_name) AS player_name,
+                MAX(age) AS age,
+                MAX(position) AS position,
+                SUM(appearances) AS appearances,
+                SUM(minutes_played) AS minutes_played,
+                ROUND(SUM(COALESCE(raw_rating, 6.5) * minutes_played) / NULLIF(SUM(minutes_played), 0), 2) AS match_rating,
+                SUM(total_goals) AS total_goals,
+                SUM(total_assists) AS total_assists,
+                SUM(goals_conceded) AS goals_conceded,
+                SUM(total_saves) AS total_saves,
+                SUM(total_shots) AS total_shots,
+                SUM(total_shots_on) AS total_shots_on,
+                SUM(total_passes) AS total_passes,
+                SUM(total_key_passes) AS total_key_passes,
+                SUM(total_tackles) AS total_tackles,
+                SUM(total_interceptions) AS total_interceptions,
+                SUM(total_blocks) AS total_blocks,
+                SUM(total_duels_won) AS total_duels_won,
+                SUM(total_fouls_committed) AS total_fouls_committed,
+                SUM(total_fouls_drawn) AS total_fouls_drawn,
+                SUM(total_yellow_cards) AS total_yellow_cards,
+                SUM(total_red_cards) AS total_red_cards
+            FROM stg_unnested_stats
+            GROUP BY player_id
+            HAVING SUM(minutes_played) >= 450
+        ),
+        primary_club AS (
+            SELECT 
+                player_id, 
+                team_name, 
+                league_name,
+                ROW_NUMBER() OVER (PARTITION BY player_id ORDER BY minutes_played DESC) as rn
+            FROM stg_unnested_stats
+        )
+        SELECT 
+            p.*,
+            c.team_name,
+            c.league_name,
+            ROUND((p.total_goals::FLOAT / p.minutes_played) * 90.0, 2) AS goals_per_90,
+            ROUND((p.total_assists::FLOAT / p.minutes_played) * 90.0, 2) AS assists_per_90,
+            ROUND((p.total_saves::FLOAT / p.minutes_played) * 90.0, 2) AS saves_per_90,
+            ROUND((p.goals_conceded::FLOAT / p.minutes_played) * 90.0, 2) AS conceded_per_90,
+            ROUND((p.total_shots::FLOAT / p.minutes_played) * 90.0, 2) AS shots_per_90,
+            ROUND((p.total_shots_on::FLOAT / p.minutes_played) * 90.0, 2) AS shots_on_target_per_90,
+            ROUND((p.total_passes::FLOAT / p.minutes_played) * 90.0, 2) AS passes_per_90,
+            ROUND((p.total_key_passes::FLOAT / p.minutes_played) * 90.0, 2) AS key_passes_per_90,
+            ROUND((p.total_tackles::FLOAT / p.minutes_played) * 90.0, 2) AS tackles_per_90,
+            ROUND((p.total_interceptions::FLOAT / p.minutes_played) * 90.0, 2) AS interceptions_per_90,
+            ROUND((p.total_blocks::FLOAT / p.minutes_played) * 90.0, 2) AS blocks_per_90,
+            ROUND((p.total_duels_won::FLOAT / p.minutes_played) * 90.0, 2) AS duels_won_per_90,
+            ROUND((p.total_fouls_committed::FLOAT / p.minutes_played) * 90.0, 2) AS fouls_committed_per_90,
+            ROUND((p.total_fouls_drawn::FLOAT / p.minutes_played) * 90.0, 2) AS fouls_drawn_per_90
+        FROM player_totals p
+        JOIN primary_club c ON p.player_id = c.player_id AND c.rn = 1;
     """)
 
 
+def getAvailableLeagues() -> list:
+    return TOP_5_LEAGUES
+
+
 def getAvailableClubs(con: duckdb.DuckDBPyConnection, league_name: str) -> list:
-    """Returns all clubs available in a specific league."""
     df = con.execute("""
         SELECT DISTINCT team_name 
         FROM fct_player_stats 
@@ -222,14 +253,21 @@ def getAvailableClubs(con: duckdb.DuckDBPyConnection, league_name: str) -> list:
     return df["team_name"].tolist()
 
 
-def getAvailableLeagues(con: duckdb.DuckDBPyConnection) -> list:
-    """Returns all distinct leagues stored in DuckDB."""
-    df = con.execute("""
-        SELECT DISTINCT league_name 
+def getClubSquadMembers(con: duckdb.DuckDBPyConnection, target_club: str, position: str, metrics: tuple) -> pd.DataFrame:
+    m1, m2, m3 = metrics
+    return con.execute(f"""
+        SELECT 
+            player_name, 
+            age, 
+            minutes_played,
+            match_rating,
+            {m1} AS metric_1, 
+            {m2} AS metric_2, 
+            {m3} AS metric_3
         FROM fct_player_stats 
-        ORDER BY league_name ASC;
-    """).fetchdf()
-    return df["league_name"].tolist()
+        WHERE team_name ILIKE $target_club AND position = '{position}'
+        ORDER BY minutes_played DESC;
+    """, {"target_club": f"%{target_club}%"}).fetchdf()
 
 
 def scoutingShortlist(
@@ -241,12 +279,8 @@ def scoutingShortlist(
     max_age: int = None,
     limit: int = 10
 ):
-    """
-    Parametric scouting engine that benchmarks candidate players on the specific
-    metrics defining their tactical sub-role.
-    """
     if sub_role not in ROLE_METRIC_MAP:
-        raise ValueError(f"Unknown sub-role '{sub_role}'. Available roles: {list(ROLE_METRIC_MAP.keys())}")
+        raise ValueError(f"Unknown sub-role '{sub_role}'")
 
     role_config = ROLE_METRIC_MAP[sub_role]
     pos = role_config["position"]
@@ -254,7 +288,6 @@ def scoutingShortlist(
     w1, w2, w3 = role_config["weights"]
     h1, h2, h3 = role_config["higher_is_better"]
 
-    # Invert sign if lower metric is superior (e.g. goals conceded for GK)
     sign1 = "+" if h1 else "-"
     sign2 = "+" if h2 else "-"
     sign3 = "+" if h3 else "-"
@@ -262,9 +295,9 @@ def scoutingShortlist(
     query = f"""
     WITH club_baseline AS (
         SELECT 
-            AVG({m1}) AS avg_m1,
-            AVG({m2}) AS avg_m2,
-            AVG({m3}) AS avg_m3,
+            COALESCE(AVG({m1}), 0.01) AS avg_m1,
+            COALESCE(AVG({m2}), 0.01) AS avg_m2,
+            COALESCE(AVG({m3}), 0.01) AS avg_m3,
             COUNT(*) AS qualified_players
         FROM fct_player_stats
         WHERE team_name ILIKE $target_club
@@ -316,20 +349,18 @@ def scoutingShortlist(
         c.total_yellow_cards,
         c.total_red_cards,
         
-        -- Individual Metrics & Deltas
         c.metric_1,
-        ROUND(c.metric_1 - COALESCE(b.avg_m1, 0), 2) AS delta_m1,
+        ROUND(c.metric_1 - b.avg_m1, 2) AS delta_m1,
         c.metric_2,
-        ROUND(c.metric_2 - COALESCE(b.avg_m2, 0), 2) AS delta_m2,
+        ROUND(c.metric_2 - b.avg_m2, 2) AS delta_m2,
         c.metric_3,
-        ROUND(c.metric_3 - COALESCE(b.avg_m3, 0), 2) AS delta_m3,
+        ROUND(c.metric_3 - b.avg_m3, 2) AS delta_m3,
 
-        -- Composite Weighted Score
         ROUND(
             (
-                {w1} * {sign1}((c.metric_1 - b.avg_m1) / NULLIF(b.avg_m1, 0)) +
-                {w2} * {sign2}((c.metric_2 - b.avg_m2) / NULLIF(b.avg_m2, 0)) +
-                {w3} * {sign3}((c.metric_3 - b.avg_m3) / NULLIF(b.avg_m3, 0))
+                {w1} * {sign1}((c.metric_1 - b.avg_m1) / GREATEST(b.avg_m1, 0.05)) +
+                {w2} * {sign2}((c.metric_2 - b.avg_m2) / GREATEST(b.avg_m2, 0.05)) +
+                {w3} * {sign3}((c.metric_3 - b.avg_m3) / GREATEST(b.avg_m3, 0.05))
             ) * 100.0,
             2
         ) AS composite_upgrade_score
@@ -337,8 +368,8 @@ def scoutingShortlist(
     FROM candidates c
     CROSS JOIN club_baseline b
     WHERE (
-        {sign1}(c.metric_1 - COALESCE(b.avg_m1, 0)) > 0 OR
-        {sign2}(c.metric_2 - COALESCE(b.avg_m2, 0)) > 0
+        {sign1}(c.metric_1 - b.avg_m1) > 0 OR
+        {sign2}(c.metric_2 - b.avg_m2) > 0
     )
     ORDER BY composite_upgrade_score DESC
     LIMIT $limit;
@@ -356,16 +387,15 @@ def scoutingShortlist(
 
     baseline_stats = con.execute(f"""
         SELECT 
-            ROUND(AVG({m1}), 2) as b_m1,
-            ROUND(AVG({m2}), 2) as b_m2,
-            ROUND(AVG({m3}), 2) as b_m3,
+            ROUND(COALESCE(AVG({m1}), 0.0), 2) as b_m1,
+            ROUND(COALESCE(AVG({m2}), 0.0), 2) as b_m2,
+            ROUND(COALESCE(AVG({m3}), 0.0), 2) as b_m3,
             COUNT(*) as sample_count
         FROM fct_player_stats
         WHERE team_name ILIKE $target_club AND position = '{pos}';
     """, {"target_club": f"%{target_club}%"}).fetchone()
 
     return result, baseline_stats, (m1, m2, m3)
-
 
 if __name__ == "__main__":
     con = connectDuckDB()

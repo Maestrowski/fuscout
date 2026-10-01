@@ -99,10 +99,10 @@ def extract_competition(comp_name: str, teams: dict, output_file: str):
 def main():
     os.makedirs("data/raw", exist_ok=True)
     
-    #extract_competition("Premier League", PREMIER_LEAGUE, "players_pl.json")
-    #extract_competition("Bundesliga", BUNDESLIGA, "players_bundesliga.json")
-    #extract_competition("La Liga", LA_LIGA, "players_laliga.json")
-    #extract_competition("Ligue 1", LIGUE_1, "players_ligue1.json")
+    extract_competition("Premier League", PREMIER_LEAGUE, "players_pl.json")
+    extract_competition("Bundesliga", BUNDESLIGA, "players_bundesliga.json")
+    extract_competition("La Liga", LA_LIGA, "players_laliga.json")
+    extract_competition("Ligue 1", LIGUE_1, "players_ligue1.json")
     extract_competition("Serie A", SERIE_A, "players_seriea.json")
     print("\nExtraction complete!")
 
