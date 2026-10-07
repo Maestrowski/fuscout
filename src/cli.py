@@ -50,20 +50,162 @@ def safe_prompt(prompt_func, *args, **kwargs):
         val = None
 
     if val is None or val == EXIT_CHOICE:
-        print("\n\n[•] Scouting session ended. Goodbye!\n")
+        print("\n\n Scouting session ended. Goodbye!\n")
         sys.exit(0)
     return val
 
 
-def run_scouting_wizard(con):
+def select_target_club(con):
+    """Prompts league and club selection."""
+    print("\n" + "=" * 80)
+    print("                FOOTBALL INTELLIGENCE SCOUTING SYSTEM")
+    print("=" * 80)
+    leagues = getAvailableLeagues()
+    target_league = safe_prompt(
+        questionary.select,
+        "Select your club's domestic league:",
+        choices=leagues + [EXIT_CHOICE]
+    )
+    clubs = getAvailableClubs(con, target_league)
+    target_club = safe_prompt(
+        questionary.select,
+        f"Select your club ({target_league}):",
+        choices=[BACK_CHOICE] + clubs + [EXIT_CHOICE]
+    )
+    if target_club == BACK_CHOICE:
+        return select_target_club(con)
+    return target_league, target_club
+
+
+def choose_scouting_mode():
+    """Allows selecting between Deficit Upgrade and Player Profile Clone."""
+    return safe_prompt(
+        questionary.select,
+        "Select Scouting Objective:",
+        choices=[
+            "1. Tactical Upgrade (Find upgrades for squad deficits)",
+            "2. Player Profile Clone (Find similar players to a squad member)",
+            EXIT_CHOICE
+        ]
+    )
+
+
+def select_target_player(con, target_club):
+    """Lists current players at the chosen club for similarity benchmarking."""
+    players_df = con.execute("""
+        SELECT player_id, player_name, position, age, minutes_played, match_rating
+        FROM fct_player_stats
+        WHERE team_name ILIKE $club
+        ORDER BY minutes_played DESC;
+    """, {"club": f"%{target_club}%"}).fetchdf()
+
+    if players_df.empty:
+        print(f"\n No qualifying players found for {target_club}.\n")
+        return None
+
+    choices = [
+        f"{row['player_name']} ({row['position']}, {row['age']}y, {int(row['minutes_played'])}m)"
+        for _, row in players_df.iterrows()
+    ]
+    choices.append(BACK_CHOICE)
+    choices.append(EXIT_CHOICE)
+
+    selection = safe_prompt(
+        questionary.select,
+        f"Select a {target_club} player to find similar profiles for:",
+        choices=choices
+    )
+
+    if selection == BACK_CHOICE or selection == EXIT_CHOICE:
+        return None
+
+    selected_name = selection.split(" (")[0]
+    matched = players_df[players_df["player_name"] == selected_name].iloc[0]
+    return int(matched["player_id"])
+
+
+def prompt_search_filters():
+    """Prompts for feeder league scope and optional age bounds."""
+    leagues = getAvailableLeagues()
+    scope = safe_prompt(
+        questionary.select,
+        "Select scouting feeder pool:",
+        choices=["Scout all Top 5 leagues (Default)", "Filter to a specific league", EXIT_CHOICE]
+    )
+    feeder_league = "All"
+    if scope == "Filter to a specific league":
+        feeder_league = safe_prompt(
+            questionary.select,
+            "Select target feeder league:",
+            choices=leagues + [EXIT_CHOICE]
+        )
+
+    print("\n[i] Enter age bounds (or leave empty for any). Type 'b' to go back.")
+    min_raw = safe_prompt(questionary.text, "Minimum player age (default: any):").strip()
+    max_raw = safe_prompt(questionary.text, "Maximum player age (default: any):").strip()
+
+    min_age = int(min_raw) if min_raw.isdigit() else None
+    max_age = int(max_raw) if max_raw.isdigit() else None
+
+    return feeder_league, min_age, max_age
+
+
+def display_similarity_shortlist(df, target_player, metrics):
+    """
+    Displays the benchmark player alongside candidate clones,
+    presenting matching per-90 metrics side-by-side with match rating.
+    """
+    print("\n" + "=" * 115)
+    print(f" BENCHMARK PLAYER: {target_player['player_name'].upper()} ({target_player['team_name']} - {target_player['position']})")
+    print(f" Age: {target_player['age']} | Rating: {target_player['match_rating']:.2f} | Minutes: {int(target_player['minutes_played'])}")
+    
+    def clean_label(col):
+        return col.replace("_per_90", "/90").replace("_", " ").title()
+
+    headers = ["#", "Candidate", "Club", "League", "Age", "Rating"] + [clean_label(m) for m in metrics]
+
+    print("-" * 115)
+    bench_row = [
+        "-",
+        target_player["player_name"] + " (Target)",
+        target_player["team_name"],
+        target_player.get("league_name", "EPL"),
+        target_player["age"],
+        f"{target_player['match_rating']:.2f}"
+    ] + [f"{target_player[m]:.2f}" for m in metrics]
+    
+    print(tabulate([bench_row], headers=headers, tablefmt="github"))
+    print("=" * 115)
+
+    if df.empty:
+        print("\n  No similar profiles found matching these parameters.\n")
+        return
+
+    display_rows = []
+    for idx, row in df.iterrows():
+        display_rows.append([
+            idx + 1,
+            row["player_name"],
+            row["current_club"],
+            row["league_name"],
+            row["age"],
+            f"{row['match_rating']:.2f}"
+        ] + [f"{row[m]:.2f}" for m in metrics])
+
+    print(f"\n TOP 10 CLOSEST STATISTICAL MATCHES:")
+    print(tabulate(display_rows, headers=headers, tablefmt="github"))
+    print("=" * 115 + "\n")
+
+
+def run_scouting_wizard(con, preset_league=None, preset_club=None):
     """
     Step machine supporting backward navigation (<-- Go Back)
     and clean menu-driven exit.
     """
-    step = 1
+    step = 3 if (preset_league and preset_club) else 1
     state = {
-        "target_league": None,
-        "target_club": None,
+        "target_league": preset_league,
+        "target_club": preset_club,
         "feeder_league": "All",
         "min_age": None,
         "max_age": None,
@@ -74,7 +216,7 @@ def run_scouting_wizard(con):
     leagues = getAvailableLeagues()
 
     while step <= 6:
-        # Step 1: Domestic League
+        # Domestic League
         if step == 1:
             print("\n" + "=" * 80)
             print("                FOOTBALL INTELLIGENCE SCOUTING SYSTEM")
@@ -88,7 +230,7 @@ def run_scouting_wizard(con):
             state["target_league"] = ans
             step += 1
 
-        # Step 2: Club
+        # Club Selection
         elif step == 2:
             clubs = getAvailableClubs(con, state["target_league"])
             choices = [BACK_CHOICE] + clubs + [EXIT_CHOICE]
@@ -103,7 +245,7 @@ def run_scouting_wizard(con):
             state["target_club"] = ans
             step += 1
 
-        # Step 3: Feeder League Scope
+        # Feeder League Scope
         elif step == 3:
             choices = [
                 "Scout all Top 5 leagues (Default)",
@@ -117,6 +259,8 @@ def run_scouting_wizard(con):
                 choices=choices
             )
             if ans == BACK_CHOICE:
+                if preset_league and preset_club:
+                    return None
                 step -= 1
                 continue
             elif ans == "Filter to a specific league":
@@ -132,7 +276,7 @@ def run_scouting_wizard(con):
                 state["feeder_league"] = "All"
             step += 1
 
-        # Step 4: Age Filters
+        #  Age Filters
         elif step == 4:
             print("\n[i] Enter age bounds (or leave empty for any). Type 'b' to go back.")
             min_raw = safe_prompt(
@@ -156,7 +300,7 @@ def run_scouting_wizard(con):
             state["max_age"] = int(max_raw) if max_raw.isdigit() else None
             step += 1
 
-        # Step 5: Position
+        # Position
         elif step == 5:
             choices = [BACK_CHOICE] + list(POSITION_SUBROLES.keys()) + [EXIT_CHOICE]
             ans = safe_prompt(
@@ -170,7 +314,7 @@ def run_scouting_wizard(con):
             state["position"] = ans
             step += 1
 
-        # Step 6: Tactical Sub-role
+        # Tactical Sub-role
         elif step == 6:
             pos_roles = POSITION_SUBROLES[state["position"]]
             choices = [BACK_CHOICE] + pos_roles + [EXIT_CHOICE]
@@ -205,7 +349,7 @@ def display_shortlist(con, df, baseline_stats, metrics, target_club, sub_role):
 
     l1, l2, l3 = format_lbl(m1), format_lbl(m2), format_lbl(m3)
 
-    # 1. Current Club Baseline Squad
+    # Current Club Baseline Squad
     club_squad = getClubSquadMembers(con, target_club, pos, metrics)
     print("\n" + "=" * 105)
     print(f" CURRENT SQUAD CONTEXT: {target_club.upper()} ({pos}s, >= 450 mins)")
@@ -230,18 +374,18 @@ def display_shortlist(con, df, baseline_stats, metrics, target_club, sub_role):
             tablefmt="github"
         ))
     else:
-        print(f" [!] No {pos}s recorded >= 450 minutes for {target_club}.")
+        print(f"  No {pos}s recorded >= 450 minutes for {target_club}.")
 
     print("-" * 105)
     print(f" Club Average Baseline: {l1}: {b_m1:.2f} | {l2}: {b_m2:.2f} | {l3}: {b_m3:.2f} (Sample: {sample_count} players)")
     print("=" * 105)
 
-    # 2. Top 10 Shortlist
+    # Top 10 Shortlist
     print(f"\n TOP 10 RECRUITMENT TARGETS: {sub_role.upper()} ({pos})")
     print("=" * 105)
 
     if df.empty:
-        print(f"\n [!] No candidate targets found matching these criteria.\n")
+        print(f"\n  No candidate targets found matching these criteria.\n")
         return
 
     display_rows = []
@@ -272,10 +416,10 @@ def display_shortlist(con, df, baseline_stats, metrics, target_club, sub_role):
 
 
 def inspect_player_details(df):
-    """Provides navigation between dossiers, role changes, new searches, or exit."""
+    """Provides navigation between reports, role changes, new searches, or exit."""
     while True:
         choices = [
-            f"{i+1}. {row['player_name']} ({row['current_club']}) - Score: {row['composite_upgrade_score']:+.2f}"
+            f"{i+1}. {row['player_name']} ({row['current_club']})"
             for i, row in df.iterrows()
         ]
         choices.append("Scout another position / role")
@@ -284,7 +428,7 @@ def inspect_player_details(df):
 
         selection = safe_prompt(
             questionary.select,
-            "Select a player to view dossier, change role, or exit:",
+            "Select a player to view report, change role, or exit:",
             choices=choices
         )
 
@@ -297,7 +441,7 @@ def inspect_player_details(df):
         p = df.iloc[idx]
 
         print("\n" + "#" * 60)
-        print(f"       PLAYER DOSSIER: {p['player_name'].upper()}")
+        print(f"       PLAYER REPORT: {p['player_name'].upper()}")
         print("#" * 60)
         print(f" Club:              {p['current_club']}")
         print(f" League:            {p['league_name']}")
@@ -305,12 +449,12 @@ def inspect_player_details(df):
         print(f" Minutes Played:    {int(p['minutes_played'])} ({int(p['appearances'])} apps)")
         print(f" Overall Rating:    {p['match_rating']:.2f}")
         print("-" * 60)
-        print(" [•] ATTACKING & CREATIVE OUTPUT")
+        print("  ATTACKING & CREATIVE OUTPUT")
         print(f"     Goals:             {int(p['total_goals'])}")
         print(f"     Assists:           {int(p['total_assists'])}")
         print(f"     Total Passes:      {int(p['total_passes'])}")
         print("-" * 60)
-        print(" [•] DEFENSIVE & DISCIPLINARY")
+        print("  DEFENSIVE & DISCIPLINARY")
         print(f"     Tackles:           {int(p['total_tackles'])}")
         print(f"     Interceptions:     {int(p['total_interceptions'])}")
         print(f"     Yellow Cards:      {int(p['total_yellow_cards'])}")

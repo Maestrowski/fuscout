@@ -1,6 +1,10 @@
 ## What I built and who for
 
-I built a CLI-based football player scouting and benchmark tool. This project analyses a teams weakness in specific positions and suggests the correct fit of players as potential transfer targets. This is mainly a data engineerined scouting tool which would be used by professional football scouts across the top 5 european leagues, where they would obtain the data report and then decide to further analyse the reported player. This can also be used by recruitment analysts that can use this tool to evaluate their transfer strategies. 
+I built a CLI-based football player scouting and benchmark tool. This project analyses a teams weakness in specific positions and suggests the correct fit of players as potential transfer targets. 
+
+This is mainly a data engineerined scouting tool which would be used by professional football scouts across the top 5 european leagues, where they would obtain the data report and then decide to further analyse the reported player. This can also be used by recruitment analysts that can use this tool to evaluate their transfer strategies. 
+
+Players with less than 450 minutes were skipped out from the analysis because they can inflate statistics per 90 minutes and also there is still a lack of concrete evidence whether a player can perform consistently. Also for a cleaner report and to prevent any cross competition conflicts, only domestic league statistics are taken into account. 
 
 ## The data
 * **API Used:** [API-Football (v3)](https://www.api-football.com/)
@@ -72,7 +76,7 @@ python main.py
 
 I would integrate market values, wage estimates and contract expiration dates to assess if the player is affordable for a set club, for example Brighton wouldn't be able to afford a player like Vinicius Jr.
 
-Player similarity rader: Allow a way to look for players with a similiar profile to current players at a club. So for example if Manchester United wanted to replace Harry Maguire, they would look for players with similiar statistics
+Provide a web interface hosted on Streamlit for ease of use.
 
 Provide CSV reports as output for future use
 

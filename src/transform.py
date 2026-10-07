@@ -127,6 +127,24 @@ ROLE_METRIC_MAP = {
     }
 }
 
+POSITION_SIMILARITY_METRICS = {
+    "Attacker": [
+        "goals_per_90", "shots_per_90", "shots_on_target_per_90",
+        "key_passes_per_90", "duels_won_per_90"
+    ],
+    "Midfielder": [
+        "passes_per_90", "key_passes_per_90", "tackles_per_90",
+        "interceptions_per_90", "duels_won_per_90"
+    ],
+    "Defender": [
+        "passes_per_90", "tackles_per_90", "interceptions_per_90",
+        "blocks_per_90", "duels_won_per_90"
+    ],
+    "Goalkeeper": [
+        "saves_per_90", "conceded_per_90", "passes_per_90"
+    ]
+}
+
 
 def connectDuckDB():
     return duckdb.connect()
@@ -140,7 +158,7 @@ def playerModel(con: duckdb.DuckDBPyConnection):
         SELECT * FROM read_json_auto('{raw_files_pattern}');
     """)
 
-    # 1. Unnest ALL competitions so we can isolate purely Top 5 League stats
+    # Unnest ALL competitions so we can isolate purely Top 5 League stats
     con.execute("""
         CREATE OR REPLACE TABLE stg_unnested_stats AS
         SELECT 
@@ -176,7 +194,7 @@ def playerModel(con: duckdb.DuckDBPyConnection):
           AND stat.league.name IN ('Premier League', 'Bundesliga', 'La Liga', 'Ligue 1', 'Serie A');
     """)
 
-    # 2. Aggregate cleanly by player_id and primary club
+    # Aggregate cleanly by player_id and primary club
     con.execute("""
         CREATE OR REPLACE TABLE fct_player_stats AS 
         WITH player_totals AS (
@@ -396,6 +414,83 @@ def scoutingShortlist(
     """, {"target_club": f"%{target_club}%"}).fetchone()
 
     return result, baseline_stats, (m1, m2, m3)
+
+def findSimilarPlayers(
+    con: duckdb.DuckDBPyConnection,
+    target_player_id: int,
+    feeder_league: str = "All",
+    min_age: int = None,
+    max_age: int = None,
+    limit: int = 10
+):
+    target = con.execute("""
+        SELECT * FROM fct_player_stats WHERE player_id = $pid;
+    """, {"pid": target_player_id}).fetchdf()
+
+    if target.empty:
+        return pd.DataFrame(), None, []
+
+    pos = target.iloc[0]["position"]
+    metrics = POSITION_SIMILARITY_METRICS.get(pos, POSITION_SIMILARITY_METRICS["Midfielder"])
+    k = len(metrics)
+
+    dist_parts = []
+    for m in metrics:
+        t_val = float(target.iloc[0][m])
+        stats = con.execute(f"""
+            SELECT AVG({m}) as m_mean, STDDEV_SAMP({m}) as m_std 
+            FROM fct_player_stats WHERE position = '{pos}';
+        """).fetchone()
+
+        m_mean = stats[0] or 0.0
+        m_std = stats[1] if (stats[1] and stats[1] > 0) else 1.0
+        z_target = (t_val - m_mean) / m_std
+
+        dist_parts.append(f"POW((({m} - {m_mean:.4f}) / {m_std:.4f}) - ({z_target:.4f}), 2)")
+
+    dist_formula = " + ".join(dist_parts)
+    max_theoretical_dist = 2.0 * (k ** 0.5)
+
+    query = f"""
+    SELECT 
+        player_id,
+        player_name,
+        team_name AS current_club,
+        league_name,
+        age,
+        match_rating,
+        minutes_played,
+        appearances,
+        total_goals,
+        total_assists,
+        total_passes,
+        total_tackles,
+        total_interceptions,
+        total_yellow_cards,
+        total_red_cards,
+        {", ".join(metrics)},
+        ROUND(SQRT({dist_formula}), 2) AS euclidean_distance,
+        ROUND(GREATEST(0.0, (1.0 - (SQRT({dist_formula}) / {max_theoretical_dist:.4f})) * 100.0), 1) AS similarity_pct
+    FROM fct_player_stats
+    WHERE position = '{pos}'
+      AND player_id != {target_player_id}
+      AND ($feeder_league = 'All' OR league_name ILIKE $feeder_league)
+      AND ($min_age IS NULL OR age >= $min_age)
+      AND ($max_age IS NULL OR age <= $max_age)
+    ORDER BY similarity_pct DESC
+    LIMIT $limit;
+    """
+
+    league_param = "All" if feeder_league.strip().lower() == "all" else f"%{feeder_league}%"
+
+    results = con.execute(query, {
+        "feeder_league": league_param,
+        "min_age": min_age,
+        "max_age": max_age,
+        "limit": limit
+    }).fetchdf()
+
+    return results, target.iloc[0], metrics
 
 if __name__ == "__main__":
     con = connectDuckDB()
